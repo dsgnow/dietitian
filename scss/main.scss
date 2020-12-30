@@ -1,3 +1,20 @@
+@keyframes bulb {
+    0% {
+        top: -10%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        top: -15%;
+        transform: rotate(180deg) scale(1.04);
+    }
+
+    100% {
+        top: -10%;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
 html {
     font-family: 'Open Sans', sans-serif;
 }
@@ -39,9 +56,24 @@ html {
     max-width: 90vw;
     flex-grow: 1;
 
-    & img,
+    &__wrap {
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+
     &__imgDietitian {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: -4px;
+        z-index: 999;
+    }
+
+    &__blob {
+        position: absolute;
+        animation: bulb linear 3s infinite;
+        width: 100%;
+        z-index: -1;
+
     }
 }

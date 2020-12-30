@@ -854,6 +854,42 @@ input:focus {
   }
 }
 
+@-webkit-keyframes bulb {
+  0% {
+    top: -10%;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    top: -15%;
+    -webkit-transform: rotate(180deg) scale(1.04);
+            transform: rotate(180deg) scale(1.04);
+  }
+  100% {
+    top: -10%;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes bulb {
+  0% {
+    top: -10%;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    top: -15%;
+    -webkit-transform: rotate(180deg) scale(1.04);
+            transform: rotate(180deg) scale(1.04);
+  }
+  100% {
+    top: -10%;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -914,8 +950,24 @@ html {
           flex-grow: 1;
 }
 
-.columnImages img, .columnImages__imgDietitian {
-  width: 100%;
+.columnImages__wrap {
   margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.columnImages__imgDietitian {
+  width: 100%;
+  margin-bottom: -4px;
+  z-index: 999;
+}
+
+.columnImages__blob {
+  position: absolute;
+  -webkit-animation: bulb linear 3s infinite;
+          animation: bulb linear 3s infinite;
+  width: 100%;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

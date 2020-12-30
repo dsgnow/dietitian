@@ -61,15 +61,20 @@ window.addEventListener('scroll', function () {
     const windowHeight = bodyelem.innerHeight;
     const scrollValue = bodyelem.scrollY;
     const nav = document.querySelector('nav');
+    const logo = document.querySelector('.stickyLogo');
 
     // change nav color //
     if ((scrollValue < 50)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');
+        logo.classList.remove('stickyLogo--hide');
+        logo.classList.add('stickyLogo--show');
 
     } else if ((scrollValue < windowHeight)) {
         nav.classList.add('nav--transBgc');
         nav.classList.remove('nav--basic');
+        logo.classList.add('stickyLogo--hide');
+        logo.classList.remove('stickyLogo--show');
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
         nav.classList.remove('nav--solidBgc');

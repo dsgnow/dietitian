@@ -11,16 +11,17 @@
 
 <body>
   <header>
+    <div class="stickyLogo stickyLogo--show">
+      <img class="stickyLogo__logo" src="svg/dietLogo.svg" alt="logo dietitian"></img>
+    </div>
     <nav class="nav nav--basic">
       <ul class="nav__list">
         <li class="nav__element">
           <a class="nav__link nav__link--start nav__link--selected" data-section="nav__link--start"
-                    href="#">Start</a></li>
-        <li class="nav__element">
-          <a class="nav__link nav__link--about " data-section="nav__link--about" href="#">O mnie</a>
+                    href="#">Start</a>
         </li>
         <li class="nav__element">
-          <img class="nav__logo" src="img/dietLogo.svg" alt="logo dietitian"></img>
+          <a class="nav__link nav__link--about " data-section="nav__link--about" href="#">O mnie</a>
         </li>
         <li class="nav__element">
           <a class="nav__link nav__link--offer" data-section="nav__link--offer" href="#">Usługi</a>
@@ -36,7 +37,7 @@
     <nav class="navBurger navBurger--hide">
       <ul class="navBurger__list">
         <li class="navBurger__element">
-          <img class="navBurger__logo" src="img/dietLogo.svg" alt="logo dietitian"></img>
+          <img class="navBurger__logo" src="svg/dietLogo.svg" alt="logo dietitian"></img>
         </li>
         <li class="navBurger__element navBurger__element--selected">
           <a class="navBurger__link navBurger__link--start" data-section="nav__link--start" href="#">Start</a>
@@ -66,6 +67,21 @@
     </div>
   </header>
   <main>
+    <div class="wrapStart" data-sectionin="nav__link--start">
+    <section class="columnTexts">
+      <h1 class="columnTexts__head">Dietetyk</h1>
+        <p class="columnTexts__descriptionText">Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna.
+        </p>
+            <button class="button columnTexts__btn">czytaj dalej</button>
+    </section>
+    <section class="columnImages">
+      <img class="columnImages__imgDietitian" src="svg/dietitianStart.svg" alt="dietitian">
+  </section>
+    </div>
   </main>
   <footer>
   </footer>

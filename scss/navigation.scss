@@ -90,6 +90,28 @@
     }
 }
 
+@keyframes show {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes showFromTop {
     0% {
         transform: translateY(-100%);
@@ -114,35 +136,64 @@
 
 @keyframes navBasic {
     0% {
-        width: 65%;
+        width: 85%;
+        top: 30px;
     }
 
     100% {
-        width: 70%;
+        width: 100%;
+        top: 80px
     }
 }
 
 
 @keyframes navSmall {
     0% {
-        width: 70%;
+        width: 100%;
+        top: 80px
     }
 
     100% {
-        width: 65%;
+        width: 85%;
+        top: 30px;
     }
 }
+
+
+
+.stickyLogo {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    transform: translate(0, -50%);
+
+    &__logo {
+        height: 50px;
+    }
+
+    &--hide {
+        animation: hide .2s;
+        animation-fill-mode: forwards;
+    }
+
+    &--show {
+        animation: show .2s;
+        animation-fill-mode: forwards;
+    }
+}
+
 
 .nav {
     display: none;
     position: fixed;
-    top: 0%;
+    top: 80px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 9999;
-    width: 70%;
+    width: 100%;
     transition: .3s ease-in-out;
     font-family: $mainFont;
+    font-weight: 800;
     text-transform: uppercase;
     transition: .3s;
 
@@ -151,7 +202,6 @@
     }
 
     &--transBgc {
-        background-color: rgba(11, 11, 13, 0.3);
         animation: navSmall .3s;
         animation-fill-mode: forwards;
     }
@@ -178,7 +228,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 15%;
+        width: 10%;
         position: relative;
     }
 
@@ -187,7 +237,7 @@
         display: block;
         text-align: center;
         margin: 0 auto;
-        color: white;
+        color: $black;
         line-height: 30px;
         width: 100%;
         transition: .3s;
@@ -195,12 +245,7 @@
     }
 
     &__link:hover {
-        font-weight: 500;
         transform: scale(1.1);
-    }
-
-    &__logo {
-        height: 40%;
     }
 
 }
@@ -213,13 +258,14 @@
     right: unset;
     width: 100vw;
     height: 100vh;
+    font-weight: 800;
     font-family: $mainFont;
     text-transform: uppercase;
     background-color: white;
     z-index: 9999;
-    -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
 
     &--show {
         animation: showFromTop 1s;
@@ -251,11 +297,10 @@
     }
 
     &__element:nth-child(1) {
-        background-color: $orange;
+        background-color: $bcgGrey;
     }
 
     &__element:hover .navBurger__link {
-        font-weight: 500;
         transform: scale(1.1);
     }
 
@@ -267,7 +312,6 @@
         color: black;
         width: 100%;
         transition: .3s;
-        font-weight: 500;
         text-decoration: none;
         text-align: center;
         height: 100%;
@@ -282,8 +326,8 @@
 
 .navBurgerBox {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 30px;
     width: 45px;
     cursor: pointer;
     padding: 5px;
@@ -416,7 +460,7 @@
 @media (min-width: 768px) and (orientation: portrait) {
 
     .navBurger__list {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .navBurgerBox {
@@ -443,7 +487,7 @@
 @media (min-width: 1024px) and (orientation: portrait) {
 
     .navBurger__list {
-        font-size: 55px;
+        font-size: 45px;
     }
 
     .navBurgerBox {
@@ -459,16 +503,9 @@
         height: 100vh;
 
         &__list {
-            font-size: 25px;
+            font-size: 12px;
         }
 
-        &__element {
-            height: 20vh;
-        }
-
-        &__link {
-            line-height: 20vh;
-        }
     }
 
 }
@@ -476,12 +513,28 @@
 
 @media (orientation: landscape) and (min-width:1024px) {
 
+    .stickyLogo {
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__logo {
+            height: 50px;
+        }
+
+    }
+
     .nav {
         display: flex;
-        width: 70%;
+        width: 100%;
 
         &__list {
             padding: 10px 15px;
+            font-size: 12px;
+        }
+
+        &__link {
             font-size: 15px;
         }
     }
@@ -500,6 +553,6 @@
 @media (orientation: landscape) and (min-width:1400px) {
     .nav {
         display: flex;
-        width: 70%;
+        width: 100%;
     }
 }

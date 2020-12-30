@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 /* font-family: 'Open Sans', sans-serif; */
 
 $mainFont: 'Open Sans',
@@ -12,3 +12,23 @@ $bcgGrey: #F6F6F6;
 $lightGrey: #E6E7E8;
 $grey: #727272;
 $orange: #FF6F41;
+
+.button {
+    background-color: $orange;
+    color: white;
+    outline: none;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+    margin: 10px 0;
+
+    &:hover {
+        border: 1px solid $orange;
+        background-color: white;
+        color: $orange;
+    }
+}

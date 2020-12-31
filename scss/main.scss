@@ -1,16 +1,33 @@
 @keyframes bulb {
     0% {
-        top: -10%;
+        top: 25%;
         transform: rotate(0deg) scale(1);
     }
 
     50% {
-        top: -15%;
-        transform: rotate(180deg) scale(1.04);
+        top: 5%;
+        transform: rotate(180deg) scale(1.1);
     }
 
     100% {
-        top: -10%;
+        top: 25%;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes bulbSmall {
+    0% {
+        top: -5%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        top: -5%;
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        top: -5%;
         transform: rotate(360deg) scale(1);
     }
 }
@@ -19,12 +36,13 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
-.wrapStart {
+.wrapStart,
+.wrapAbout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     width: 100vw;
+    min-width: 300px;
 }
 
 .columnTexts {
@@ -35,11 +53,21 @@ html {
     align-items: flex-start;
     justify-content: center;
 
+    &--about {
+        margin-top: 50px;
+    }
+
     & h1,
+    & h2,
     &__head {
         font-weight: 600px;
         font-size: 40px;
         color: $black;
+        width: 85%;
+    }
+
+    & h2 {
+        font-size: 30px;
     }
 
     & p,
@@ -47,7 +75,7 @@ html {
         font-weight: 400;
         font-size: 15px;
         color: $grey;
-        width: 90%;
+        width: 85%;
         margin: 10px 0;
     }
 }
@@ -57,7 +85,7 @@ html {
     flex-grow: 1;
 
     &__wrap {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         overflow: hidden;
         position: relative;
         text-align: center;
@@ -65,15 +93,26 @@ html {
 
     &__imgDietitian {
         width: 100%;
-        margin-bottom: -4px;
+        margin-bottom: -5px;
         z-index: 999;
     }
 
     &__blob {
         position: absolute;
-        animation: bulb linear 3s infinite;
+        left: 0%;
+        animation: bulb linear 4s infinite;
         width: 100%;
+        right: auto;
         z-index: -1;
-
     }
+
+    &__blobSmall {
+        position: absolute;
+        left: 2%;
+        animation: bulbSmall linear 6s infinite;
+        width: 90%;
+        right: auto;
+        z-index: -1;
+    }
+
 }

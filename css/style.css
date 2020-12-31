@@ -368,15 +368,15 @@ input:focus {
 }
 
 .stickyLogo--hide {
-  -webkit-animation: hide .2s;
-          animation: hide .2s;
+  -webkit-animation: hide .3s;
+          animation: hide .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .stickyLogo--show {
-  -webkit-animation: show .2s;
-          animation: show .2s;
+  -webkit-animation: show .3s;
+          animation: show .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -404,15 +404,15 @@ input:focus {
 }
 
 .nav--transBgc {
-  -webkit-animation: navSmall .3s;
-          animation: navSmall .3s;
+  -webkit-animation: navSmall .4s;
+          animation: navSmall .4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .nav--basic {
-  -webkit-animation: navBasic .3s;
-          animation: navBasic .3s;
+  -webkit-animation: navBasic .4s;
+          animation: navBasic .4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -856,17 +856,17 @@ input:focus {
 
 @-webkit-keyframes bulb {
   0% {
-    top: -10%;
+    top: 25%;
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
   }
   50% {
-    top: -15%;
-    -webkit-transform: rotate(180deg) scale(1.04);
-            transform: rotate(180deg) scale(1.04);
+    top: 5%;
+    -webkit-transform: rotate(180deg) scale(1.1);
+            transform: rotate(180deg) scale(1.1);
   }
   100% {
-    top: -10%;
+    top: 25%;
     -webkit-transform: rotate(360deg) scale(1);
             transform: rotate(360deg) scale(1);
   }
@@ -874,17 +874,53 @@ input:focus {
 
 @keyframes bulb {
   0% {
-    top: -10%;
+    top: 25%;
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
   }
   50% {
-    top: -15%;
-    -webkit-transform: rotate(180deg) scale(1.04);
-            transform: rotate(180deg) scale(1.04);
+    top: 5%;
+    -webkit-transform: rotate(180deg) scale(1.1);
+            transform: rotate(180deg) scale(1.1);
   }
   100% {
-    top: -10%;
+    top: 25%;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes bulbSmall {
+  0% {
+    top: -5%;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    top: -5%;
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    top: -5%;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes bulbSmall {
+  0% {
+    top: -5%;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    top: -5%;
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    top: -5%;
     -webkit-transform: rotate(360deg) scale(1);
             transform: rotate(360deg) scale(1);
   }
@@ -894,7 +930,8 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-.wrapStart {
+.wrapStart,
+.wrapAbout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -905,8 +942,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
   width: 100vw;
+  min-width: 300px;
 }
 
 .columnTexts {
@@ -929,17 +966,27 @@ html {
           justify-content: center;
 }
 
-.columnTexts h1, .columnTexts__head {
+.columnTexts--about {
+  margin-top: 50px;
+}
+
+.columnTexts h1,
+.columnTexts h2, .columnTexts__head {
   font-weight: 600px;
   font-size: 40px;
   color: #333333;
+  width: 85%;
+}
+
+.columnTexts h2 {
+  font-size: 30px;
 }
 
 .columnTexts p, .columnTexts__descriptionText {
   font-weight: 400;
   font-size: 15px;
   color: #727272;
-  width: 90%;
+  width: 85%;
   margin: 10px 0;
 }
 
@@ -951,7 +998,7 @@ html {
 }
 
 .columnImages__wrap {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -959,15 +1006,27 @@ html {
 
 .columnImages__imgDietitian {
   width: 100%;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
   z-index: 999;
 }
 
 .columnImages__blob {
   position: absolute;
-  -webkit-animation: bulb linear 3s infinite;
-          animation: bulb linear 3s infinite;
+  left: 0%;
+  -webkit-animation: bulb linear 4s infinite;
+          animation: bulb linear 4s infinite;
   width: 100%;
+  right: auto;
+  z-index: -1;
+}
+
+.columnImages__blobSmall {
+  position: absolute;
+  left: 2%;
+  -webkit-animation: bulbSmall linear 6s infinite;
+          animation: bulbSmall linear 6s infinite;
+  width: 90%;
+  right: auto;
   z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

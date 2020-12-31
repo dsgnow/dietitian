@@ -172,12 +172,12 @@
     }
 
     &--hide {
-        animation: hide .2s;
+        animation: hide .3s;
         animation-fill-mode: forwards;
     }
 
     &--show {
-        animation: show .2s;
+        animation: show .3s;
         animation-fill-mode: forwards;
     }
 }
@@ -202,12 +202,12 @@
     }
 
     &--transBgc {
-        animation: navSmall .3s;
+        animation: navSmall .4s;
         animation-fill-mode: forwards;
     }
 
     &--basic {
-        animation: navBasic .3s;
+        animation: navBasic .4s;
         animation-fill-mode: forwards;
     }
 

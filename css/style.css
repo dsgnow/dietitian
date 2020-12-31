@@ -998,6 +998,7 @@ html {
   line-height: 40px;
   padding-bottom: 10px;
   border-bottom: 2px solid #FF6F41;
+  width: 100%;
 }
 
 .columnTexts h2 {

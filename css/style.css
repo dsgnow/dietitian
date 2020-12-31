@@ -1019,10 +1019,6 @@ html {
   width: 100%;
 }
 
-.columnTexts__head--Odd {
-  text-align: right;
-}
-
 .columnTexts h2 {
   font-size: 30px;
   line-height: 30px;

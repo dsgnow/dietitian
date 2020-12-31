@@ -64,7 +64,7 @@ window.addEventListener('scroll', function () {
     const logo = document.querySelector('.stickyLogo');
 
     // change nav color //
-    if ((scrollValue < 50)) {
+    if ((scrollValue < 20)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');
         logo.classList.remove('stickyLogo--hide');

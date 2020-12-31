@@ -41,20 +41,35 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
     width: 100vw;
     min-width: 300px;
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.wrapStart {
+    margin-top: 100px;
 }
 
 .columnTexts {
-    margin: 80px 20px 20px;
+    margin: 0 20px 20px;
     flex-grow: 3;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    text-align: justify;
+
+    @media (orientation: landscape) {
+        max-width: 50%;
+    }
 
     &--about {
-        margin-top: 50px;
+        // margin-top: 0;
     }
 
     & h1,
@@ -63,7 +78,6 @@ html {
         font-weight: 600px;
         font-size: 40px;
         color: $black;
-        width: 85%;
     }
 
     & h2 {
@@ -75,14 +89,20 @@ html {
         font-weight: 400;
         font-size: 15px;
         color: $grey;
-        width: 85%;
         margin: 10px 0;
     }
 }
 
 .columnImages {
     max-width: 90vw;
-    flex-grow: 1;
+    flex-grow: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media (orientation: landscape) {
+        max-width: 50%;
+    }
 
     &__wrap {
         margin-bottom: 20px;
@@ -95,6 +115,10 @@ html {
         width: 100%;
         margin-bottom: -5px;
         z-index: 999;
+
+        @media (orientation: landscape) {
+            width: 90%;
+        }
     }
 
     &__blob {

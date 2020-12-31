@@ -478,7 +478,7 @@ input:focus {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: fixed;
-  top: unset;
+  top: 0;
   right: unset;
   width: 100vw;
   height: 100vh;
@@ -942,12 +942,30 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 50px;
   width: 100vw;
   min-width: 300px;
 }
 
+@media (orientation: landscape) {
+  .wrapStart,
+  .wrapAbout {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.wrapStart {
+  margin-top: 100px;
+}
+
 .columnTexts {
-  margin: 80px 20px 20px;
+  margin: 0 20px 20px;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -964,10 +982,13 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: justify;
 }
 
-.columnTexts--about {
-  margin-top: 50px;
+@media (orientation: landscape) {
+  .columnTexts {
+    max-width: 50%;
+  }
 }
 
 .columnTexts h1,
@@ -975,7 +996,6 @@ html {
   font-weight: 600px;
   font-size: 40px;
   color: #333333;
-  width: 85%;
 }
 
 .columnTexts h2 {
@@ -986,15 +1006,30 @@ html {
   font-weight: 400;
   font-size: 15px;
   color: #727272;
-  width: 85%;
   margin: 10px 0;
 }
 
 .columnImages {
   max-width: 90vw;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (orientation: landscape) {
+  .columnImages {
+    max-width: 50%;
+  }
 }
 
 .columnImages__wrap {
@@ -1008,6 +1043,12 @@ html {
   width: 100%;
   margin-bottom: -5px;
   z-index: 999;
+}
+
+@media (orientation: landscape) {
+  .columnImages__imgDietitian {
+    width: 90%;
+  }
 }
 
 .columnImages__blob {

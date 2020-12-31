@@ -159,26 +159,31 @@
     }
 }
 
-
-
 .stickyLogo {
-    position: fixed;
-    top: 50px;
-    left: 20px;
-    transform: translate(0, -50%);
+    display: none;
+}
 
-    &__logo {
-        height: 50px;
-    }
+@media (orientation: landscape) and (min-width:768px) {
+    .stickyLogo {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        transform: translate(0, -50%);
 
-    &--hide {
-        animation: hide .3s;
-        animation-fill-mode: forwards;
-    }
+        &__logo {
+            height: 50px;
+        }
 
-    &--show {
-        animation: show .3s;
-        animation-fill-mode: forwards;
+        &--hide {
+            animation: hide .3s;
+            animation-fill-mode: forwards;
+        }
+
+        &--show {
+            animation: show .3s;
+            animation-fill-mode: forwards;
+        }
     }
 }
 

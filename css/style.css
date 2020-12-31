@@ -995,17 +995,21 @@ html {
   font-weight: 600px;
   font-size: 40px;
   color: #333333;
+  line-height: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #FF6F41;
 }
 
 .columnTexts h2 {
   font-size: 30px;
+  line-height: 30px;
 }
 
 .columnTexts p, .columnTexts__descriptionText {
   font-weight: 400;
   font-size: 15px;
   color: #727272;
-  margin: 10px 0;
+  margin: 10px 0 25px;
 }
 
 .columnImages {

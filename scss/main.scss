@@ -68,20 +68,20 @@ html {
         max-width: 50%;
     }
 
-    &--about {
-        // margin-top: 0;
-    }
-
     & h1,
     & h2,
     &__head {
         font-weight: 600px;
         font-size: 40px;
         color: $black;
+        line-height: 40px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $orange;
     }
 
     & h2 {
         font-size: 30px;
+        line-height: 30px;
     }
 
     & p,
@@ -89,7 +89,7 @@ html {
         font-weight: 400;
         font-size: 15px;
         color: $grey;
-        margin: 10px 0;
+        margin: 10px 0 25px;
     }
 }
 

@@ -57,7 +57,7 @@ html {
 
 .columnTexts {
     margin: 0 20px 20px;
-    flex-grow: 3;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -75,7 +75,7 @@ html {
         font-size: 40px;
         color: $black;
         line-height: 40px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         border-bottom: 2px solid $orange;
         width: 100%;
     }
@@ -90,13 +90,13 @@ html {
         font-weight: 400;
         font-size: 15px;
         color: $grey;
-        margin: 10px 0 25px;
+        margin: 20px 0 25px;
     }
 }
 
 .columnImages {
     max-width: 90vw;
-    flex-grow: 0;
+    flex-grow: 2;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;

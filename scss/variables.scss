@@ -19,12 +19,13 @@ $orange: #FF6F41;
     outline: none;
     border: 1px solid transparent;
     font-weight: 400;
-    font-size: 14px;
-    padding: 5px 25px;
+    font-size: 17px;
+    padding: 8px 30px;
     border-radius: 15px;
     cursor: pointer;
     transition: .3s;
     margin: 10px 0;
+    letter-spacing: 1px;
 
     &:hover {
         border: 1px solid $orange;

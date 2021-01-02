@@ -34,36 +34,55 @@
 
 html {
     font-family: 'Open Sans', sans-serif;
+    height: 500vh;
 }
 
 .wrapStart,
-.wrapAbout {
+.wrapAbout,
+.wrapOffer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
     width: 100vw;
+    max-width: 100%;
     min-width: 300px;
 
     @media (orientation: landscape) {
         flex-direction: row;
-        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        align-items: flex-start;
     }
 }
 
 .wrapStart {
-    @media (orientation: landscape) and (min-width: 768px) {
+    height: 100vh;
+    margin-top: 20px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
         margin-top: 150px;
+        margin-bottom: 0;
+    }
+}
+
+.wrapAbout {
+    margin-bottom: 30px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        margin-top: 0;
     }
 }
 
 .columnTexts {
     margin: 0 20px 20px;
     flex-grow: 1;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: justify;
 
     &--about {
@@ -78,41 +97,86 @@ html {
         }
     }
 
-    & h1,
-    & h2,
-    &__head {
-        font-weight: 600px;
-        font-size: 40px;
-        color: $black;
-        line-height: 40px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid $orange;
-        width: 100%;
+    @media (orientation: landscape) and (min-width: 1024px) {
+        max-width: 30%;
+        margin: 0 40px 0;
     }
 
-    & h2 {
-        font-size: 30px;
-        line-height: 30px;
+    @media (orientation: landscape) and (min-width: 1200px) {
+        margin: 50px 80px 0;
     }
 
-    & p,
-    &__descriptionText {
-        font-weight: 400;
-        font-size: 15px;
-        color: $grey;
-        margin: 20px 0 25px;
+    @media (orientation: landscape) and (min-width: 1300px) {
+        margin-top: 100px;
+    }
+
+}
+
+h1,
+h2,
+h3,
+.columnTexts__head {
+    font-weight: 600px;
+    font-size: 40px;
+    color: $black;
+    line-height: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $orange;
+    width: 100%;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        font-size: 50px;
+        line-height: 45px;
     }
 }
 
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        font-size: 40px;
+        line-height: 35px;
+    }
+}
+
+h3 {
+    font-size: 25px;
+    line-height: 25px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        font-size: 35px;
+        line-height: 30px;
+    }
+}
+
+p,
+.columnTexts__descriptionText {
+    font-weight: 400;
+    font-size: 15px;
+    color: $grey;
+    margin: 20px 0 25px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        font-size: 20px;
+    }
+}
+
+
 .columnImages {
-    max-width: 90vw;
+    max-width: 90%;
     flex-grow: 2;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    overflow: hidden;
 
     @media (orientation: landscape) {
         max-width: 50%;
+    }
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        max-width: 70%;
     }
 
     &__wrap {
@@ -150,4 +214,79 @@ html {
         z-index: -1;
     }
 
+}
+
+.wrapOffer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    min-width: 300px;
+    padding: 0 20px 20px;
+    overflow: hidden;
+    background-color: $bcgGrey;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        padding: 30px 80px 80px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1200px) {
+        padding-top: 70px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1400px) {
+        padding-top: 120px;
+    }
+
+    &__wave {
+        position: absolute;
+        width: 100vw;
+        max-width: 100%;
+        max-height: 20vh;
+        height: 20vh;
+
+        @media (orientation: landscape) {
+            height: 10vh;
+            max-height: 10vh;
+        }
+
+        @media (orientation: landscape) and (min-width: 1024px) {
+            height: 15vh;
+            max-height: 15vh;
+        }
+
+        &--top {
+            top: 0;
+            left: 0;
+            bottom: unset;
+        }
+
+        &--bot {
+            top: unset;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+
+
+        &--top {
+            top: 0;
+        }
+
+        &--bot {
+            bottom: -1px;
+        }
+    }
+
+    &__head {
+        z-index: 999;
+        margin: 80px 20px 20px;
+    }
 }

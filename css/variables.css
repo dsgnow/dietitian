@@ -4,7 +4,7 @@
   background-color: #FF6F41;
   color: white;
   outline: none;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-weight: 400;
   font-size: 17px;
   padding: 8px 30px;
@@ -17,7 +17,7 @@
 }
 
 .button:hover {
-  border: 1px solid #FF6F41;
+  border: 2px solid #FF6F41;
   background-color: white;
   color: #FF6F41;
 }

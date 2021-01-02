@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 /* font-family: 'Open Sans', sans-serif; */
 
+// margin 20px,
+// 1024 - 40px,
+// 1200 - 80px
+
 $mainFont: 'Open Sans',
 sans-serif;
 ;
@@ -17,7 +21,7 @@ $orange: #FF6F41;
     background-color: $orange;
     color: white;
     outline: none;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     font-weight: 400;
     font-size: 17px;
     padding: 8px 30px;
@@ -28,7 +32,7 @@ $orange: #FF6F41;
     letter-spacing: 1px;
 
     &:hover {
-        border: 1px solid $orange;
+        border: 2px solid $orange;
         background-color: white;
         color: $orange;
     }

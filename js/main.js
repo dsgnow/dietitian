@@ -67,20 +67,9 @@ window.addEventListener('scroll', function () {
     if ((scrollValue < 20)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');
-        logo.classList.remove('stickyLogo--hide');
-        logo.classList.add('stickyLogo--show');
 
     } else if ((scrollValue < windowHeight)) {
         nav.classList.add('nav--transBgc');
         nav.classList.remove('nav--basic');
-        logo.classList.add('stickyLogo--hide');
-        logo.classList.remove('stickyLogo--show');
-
-    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
-        nav.classList.remove('nav--solidBgc');
-
-    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
-        nav.classList.add('nav--solidBgc');
-
-    }
+    } 
 })

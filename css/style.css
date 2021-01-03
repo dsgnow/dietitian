@@ -920,6 +920,7 @@ html {
   width: 100vw;
   max-width: 100%;
   min-width: 300px;
+  min-height: 500px;
 }
 
 @media (orientation: landscape) {
@@ -946,7 +947,7 @@ html {
 
 .wrapStart {
   height: 100vh;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -958,6 +959,12 @@ html {
 
 .wrapAbout {
   margin-bottom: 30px;
+}
+
+@media (orientation: portrait) {
+  .wrapAbout {
+    margin-top: 50px;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -972,6 +979,7 @@ html {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 100%;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,10 +1095,11 @@ p,
 }
 
 .columnImages {
-  max-width: 90%;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  max-width: 80%;
+  min-height: 200px;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1102,6 +1111,12 @@ p,
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+@media (orientation: portrait) and (min-height: 600px) {
+  .columnImages {
+    max-width: 90%;
+  }
 }
 
 @media (orientation: landscape) {

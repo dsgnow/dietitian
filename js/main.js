@@ -8,16 +8,24 @@ const navAllLinks = document.querySelectorAll('.nav__link');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 
 navAllLinks.forEach(function (navLink) {
-
     navLink.addEventListener('click', function (e) {
+
         e.preventDefault();
-        const goToSection = "[data-sectionin=" + this.dataset.section + "]";
-        document.querySelector(goToSection).scrollIntoView({
+        const element = document.querySelector("[data-sectionin=" + this.dataset.section + "]");
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition + offset;
+
+        window.scrollTo({
+            top: offsetPosition,
             behavior: 'smooth'
         });
 
     })
 })
+
 
 navAllBurgerLinks.forEach(function (navBurgerLink) {
 
@@ -71,5 +79,5 @@ window.addEventListener('scroll', function () {
     } else if ((scrollValue < windowHeight)) {
         nav.classList.add('nav--transBgc');
         nav.classList.remove('nav--basic');
-    } 
+    }
 })

@@ -17,6 +17,11 @@ $lightGrey: #E6E7E8;
 $grey: #727272;
 $orange: #FF6F41;
 
+.nav__link {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
 .button {
     background-color: $orange;
     color: white;

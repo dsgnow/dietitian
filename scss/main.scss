@@ -338,7 +338,7 @@ p,
 
 .squareOffers {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -347,6 +347,8 @@ p,
     }
 
     &--landscape {
+        flex-direction: column;
+
         @media (orientation: landscape) and (min-width: 1024px) {
             flex-wrap: wrap;
             max-width: 48%;
@@ -363,12 +365,15 @@ p,
         margin: 20px 0;
         border-radius: 10px;
         transition: .3s;
+        width: 48%;
 
         @media (orientation: landscape) and (min-width: 1024px) {
-            width: 48%;
+            width: 24%;
         }
 
         &--landscape {
+            width: 100%;
+
             @media (orientation: landscape) and (min-width: 1024px) {
                 width: 100%;
             }
@@ -413,6 +418,7 @@ p,
     &__description {
         font-size: 13px;
         transition: .3s;
+        text-align: left;
 
         @media (orientation: landscape) and (min-width: 1024px) {
             font-size: 17px;
@@ -446,8 +452,14 @@ p,
     align-items: center;
     width: 100%;
     margin: 0;
+    height: 30vh;
+
+    @media (orientation: landscape) {
+        height: 60vh;
+    }
 
     @media (orientation: landscape) and (min-width: 1024px) {
+        height: 90vh;
         max-width: 49%;
         margin: 20px 0;
     }
@@ -467,7 +479,7 @@ p,
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
-        height: 50vh;
+        height: 100vh;
     }
 
     &--img {

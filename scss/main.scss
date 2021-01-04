@@ -326,6 +326,7 @@ p,
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
+    height: auto;
     padding: 0 20px 20px;
     margin-top: 30px;
 
@@ -341,6 +342,7 @@ p,
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    cursor: pointer;
 
     @media (orientation: landscape) and (min-width: 1024px) {
         flex-direction: row;
@@ -348,6 +350,7 @@ p,
 
     &--landscape {
         flex-direction: column;
+        cursor: unset;
 
         @media (orientation: landscape) and (min-width: 1024px) {
             flex-wrap: wrap;
@@ -450,6 +453,7 @@ p,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
     width: 100%;
     margin: 0;
     height: 30vh;
@@ -459,7 +463,7 @@ p,
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
-        height: 90vh;
+        height: 80em;
         max-width: 49%;
         margin: 20px 0;
     }
@@ -479,11 +483,14 @@ p,
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
-        height: 100vh;
+        height: 100%;
     }
 
     &--img {
-        position: absolute;
         width: 100%;
+
+        @media (orientation: landscape) and (min-width: 1024px) {
+            height: 110%;
+        }
     }
 }

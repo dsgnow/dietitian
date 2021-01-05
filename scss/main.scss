@@ -183,6 +183,7 @@ p,
 
     @media (orientation: landscape) and (min-width: 1024px) {
         font-size: 20px;
+        line-height: 1.5;
     }
 }
 
@@ -319,7 +320,7 @@ p,
         margin: 80px 20px 20px;
 
         @media (orientation: landscape) and (min-width: 1024px) {
-            margin: 80px 20px 60px;
+            margin: 80px 20px 120px;
         }
     }
 }
@@ -569,21 +570,21 @@ p,
 }
 
 .testimonials {
-    margin: 0 20px 20px;
+    margin: 20px 20px 60px;
 
     @media (min-width: 1024px) {
-        margin: 0 40px 40px;
+        margin: 20px 40px 100px;
     }
 
     @media (min-width: 1200px) {
-        margin: 0 80px 80px;
+        margin: 0 80px 180px;
     }
 
     &__head {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         @media (min-width: 1024px) {
-            margin-bottom: 50px;
+            margin-bottom: 120px;
         }
     }
 }
@@ -628,7 +629,12 @@ p,
 #customers-testimonials .item {
     text-align: center;
     padding: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+
+    @media (min-width:1024px) {
+        margin-bottom: 40px;
+    }
+
     opacity: .2;
     -webkit-transform: scale3d(0.8, 0.8, 1);
     transform: scale3d(0.8, 0.8, 1);
@@ -675,4 +681,26 @@ p,
     transform-origin: 50% 50% 0;
     transition: all 250ms ease-out 0s;
     width: 20px;
+}
+
+//CONTACT
+
+.contact {
+    margin: 0 20px 20px;
+
+    @media (min-width: 1024px) {
+        margin: 0 40px 40px;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 0 80px 80px;
+    }
+
+    &__head {
+        margin-bottom: 20px;
+
+        @media (min-width: 1024px) {
+            margin-bottom: 50px;
+        }
+    }
 }

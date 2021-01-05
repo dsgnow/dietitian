@@ -1839,6 +1839,12 @@ p,
   margin: 5px 0;
   border: unset;
   border-bottom: 1px solid #333333;
+  min-height: 7vh;
+}
+
+.contact__message {
+  min-height: 15vh;
+  margin-top: 20px;
 }
 
 .contact__button {
@@ -1866,7 +1872,7 @@ p,
 
 @media (orientation: landscape) and (min-width: 1024px) {
   .contact__img--note {
-    height: 90%;
+    height: 100%;
   }
 }
 
@@ -1883,8 +1889,12 @@ p,
 @media (orientation: landscape) and (min-width: 1024px) {
   .contact__info {
     font-size: 17px;
-    max-width: 30%;
+    max-width: 60%;
   }
+}
+
+.columnImages__imgDietitian--note {
+  width: 60%;
 }
 
 .localization {
@@ -1897,6 +1907,13 @@ p,
           flex-direction: column;
   -ms-flex-preferred-size: 49vw;
       flex-basis: 49vw;
+}
+
+@media (orientation: landscape) and (min-width: 1200px) {
+  .localization {
+    -ms-flex-preferred-size: 35vw;
+        flex-basis: 35vw;
+  }
 }
 
 .localization__address {

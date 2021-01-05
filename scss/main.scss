@@ -737,6 +737,12 @@ p,
         margin: 5px 0;
         border: unset;
         border-bottom: 1px solid $black;
+        min-height: 7vh;
+    }
+
+    &__message {
+        min-height: 15vh;
+        margin-top: 20px;
     }
 
     &__button {
@@ -754,7 +760,7 @@ p,
             height: 80%;
 
             @media (orientation: landscape) and (min-width: 1024px) {
-                height: 90%;
+                height: 100%;
             }
         }
     }
@@ -768,15 +774,23 @@ p,
 
         @media (orientation: landscape) and (min-width: 1024px) {
             font-size: 17px;
-            max-width: 30%;
+            max-width: 60%;
         }
     }
+}
+
+.columnImages__imgDietitian--note {
+    width: 60%;
 }
 
 .localization {
     display: flex;
     flex-direction: column;
     flex-basis: 49vw;
+
+    @media (orientation: landscape) and (min-width: 1200px) {
+        flex-basis: 35vw;
+    }
 
     &__address {
         display: flex;

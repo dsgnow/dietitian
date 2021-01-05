@@ -38,7 +38,8 @@ html {
 
 .wrapStart,
 .wrapAbout,
-.wrapOffer {
+.wrapOffer,
+.contactWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -684,9 +685,24 @@ p,
 }
 
 //CONTACT
+.contactWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    min-height: unset;
+    min-width: unset;
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 
 .contact {
     margin: 0 20px 20px;
+    max-width: 100vw;
 
     @media (min-width: 1024px) {
         margin: 0 40px 40px;
@@ -698,9 +714,100 @@ p,
 
     &__head {
         margin-bottom: 20px;
+        width: 50%;
 
         @media (min-width: 1024px) {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
     }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+    &__name,
+    &__email,
+    &__message {
+        font-size: 18px;
+        font-family: $mainFont;
+        padding: 5px 0;
+        margin: 5px 0;
+        border: unset;
+        border-bottom: 1px solid $black;
+    }
+
+    &__button {
+        width: 130px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &--note {
+            height: 80%;
+
+            @media (orientation: landscape) and (min-width: 1024px) {
+                height: 90%;
+            }
+        }
+    }
+
+    &__info {
+        font-size: 12px;
+
+        @media (orientation: landscape) {
+            max-width: 50%;
+        }
+
+        @media (orientation: landscape) and (min-width: 1024px) {
+            font-size: 17px;
+            max-width: 30%;
+        }
+    }
+}
+
+.localization {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 49vw;
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+
+        & p,
+        & a,
+        .contact__info {
+
+            font-weight: 400;
+            font-size: 15px;
+            color: $grey;
+            margin: 0;
+
+            @media (orientation: landscape) and (min-width: 1024px) {
+                font-size: 20px;
+                line-height: 1.5;
+                max-width: 40vw;
+            }
+        }
+    }
+
+    &__wrapAdressElement--name p {
+        font-weight: 800;
+        margin-bottom: 5px;
+        font-size: 17px;
+
+        @media (min-width: 1024px) {
+            font-size: 22px;
+        }
+    }
+
+
 }

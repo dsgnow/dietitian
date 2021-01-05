@@ -563,6 +563,11 @@ p,
 
 //TESTIMONIALS OWL CAROUSEL
 
+.owl-carousel {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
 .testimonials {
     margin: 0 20px 20px;
 

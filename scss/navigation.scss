@@ -202,6 +202,11 @@
     text-transform: uppercase;
     transition: .3s;
 
+    @media (min-width: 1910px) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
     &--transBgc {
         animation: navSmall .4s;
         animation-fill-mode: forwards;

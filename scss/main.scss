@@ -103,12 +103,13 @@ footer {
         align-items: flex-end;
     }
 
+    @media (orientation: portrait) and (min-width: 768px) {
+        max-width: 80%;
+    }
+
     @media (orientation: landscape) {
         max-width: 50%;
 
-        &--about {
-            order: 2;
-        }
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
@@ -139,7 +140,7 @@ h4,
     border-bottom: 2px solid $orange;
     width: 100%;
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         font-size: 50px;
         line-height: 45px;
     }
@@ -149,7 +150,7 @@ h2 {
     font-size: 30px;
     line-height: 30px;
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         font-size: 40px;
         line-height: 35px;
     }
@@ -159,7 +160,7 @@ h3 {
     font-size: 25px;
     line-height: 25px;
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         font-size: 35px;
         line-height: 30px;
     }
@@ -177,7 +178,7 @@ h4 {
         line-height: 25px;
     }
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         font-size: 30px;
         line-height: 35px;
     }
@@ -190,7 +191,7 @@ p,
     color: $grey;
     margin: 20px 0 25px;
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         font-size: 20px;
         line-height: 1.5;
     }
@@ -210,11 +211,15 @@ p,
         max-width: 90%;
     }
 
+    @media (orientation: portrait) and (min-height: 768px) {
+        width: 90%;
+    }
+
     @media (orientation: landscape) {
         max-width: 50%;
     }
 
-    @media (orientation: landscape) and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         max-width: 70%;
     }
 
@@ -223,6 +228,10 @@ p,
         overflow: hidden;
         position: relative;
         text-align: center;
+
+        @media (orientation: portrait) and (min-height: 768px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__imgDietitian {
@@ -767,6 +776,7 @@ p,
         border: unset;
         border-bottom: 1px solid $black;
         min-height: 7vh;
+        width: 90%;
     }
 
     &__message {

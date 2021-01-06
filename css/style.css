@@ -1036,14 +1036,15 @@ footer {
           align-items: flex-end;
 }
 
+@media (orientation: portrait) and (min-width: 768px) {
+  .columnTexts {
+    max-width: 80%;
+  }
+}
+
 @media (orientation: landscape) {
   .columnTexts {
     max-width: 50%;
-  }
-  .columnTexts--about {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
 }
 
@@ -1080,7 +1081,7 @@ h4,
   width: 100%;
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   h1,
   h2,
   h3,
@@ -1096,7 +1097,7 @@ h2 {
   line-height: 30px;
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   h2 {
     font-size: 40px;
     line-height: 35px;
@@ -1108,7 +1109,7 @@ h3 {
   line-height: 25px;
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   h3 {
     font-size: 35px;
     line-height: 30px;
@@ -1130,7 +1131,7 @@ h4 {
   }
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   h4 {
     font-size: 30px;
     line-height: 35px;
@@ -1145,7 +1146,7 @@ p,
   margin: 20px 0 25px;
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   p,
   .columnTexts__descriptionText {
     font-size: 20px;
@@ -1178,13 +1179,19 @@ p,
   }
 }
 
+@media (orientation: portrait) and (min-height: 768px) {
+  .columnImages {
+    width: 90%;
+  }
+}
+
 @media (orientation: landscape) {
   .columnImages {
     max-width: 50%;
   }
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .columnImages {
     max-width: 70%;
   }
@@ -1195,6 +1202,12 @@ p,
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+
+@media (orientation: portrait) and (min-height: 768px) {
+  .columnImages__wrap {
+    margin-bottom: 50px;
+  }
 }
 
 .columnImages__imgDietitian {
@@ -1896,6 +1909,7 @@ p,
   border: unset;
   border-bottom: 1px solid #333333;
   min-height: 7vh;
+  width: 90%;
 }
 
 .contact__message {

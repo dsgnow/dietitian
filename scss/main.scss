@@ -796,6 +796,7 @@ p,
 
     &__info {
         font-size: 12px;
+        max-width: 80%;
 
         @media (orientation: landscape) {
             max-width: 50%;

@@ -1934,6 +1934,7 @@ p,
 
 .contact__info {
   font-size: 12px;
+  max-width: 80%;
 }
 
 @media (orientation: landscape) {

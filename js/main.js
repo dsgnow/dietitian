@@ -10,7 +10,7 @@ const allOffers = document.querySelectorAll('.squareOffers__offer');
 
 navAllLinks.forEach(function (navLink) {
     navLink.addEventListener('click', function (e) {
-        console.log(e);
+        
         e.preventDefault();
         const element = document.querySelector("[data-sectionin=" + this.dataset.section + "]");
         const offset = 80;

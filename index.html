@@ -135,7 +135,7 @@
         <div class="squareOffers__offer" data-section="offerConsultation">
           <div class="squareOffers__priceWrap">
             <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/appleBlck.svg" alt="offer image">
+              <img class="squareOffers__imgWrap--img" src="svg/noteBlck.svg" alt="offer image">
             </div>
             <p class="squareOffers__price">70 <span class="squareOffers__price--currency">zł</span></p>
           </div>
@@ -146,7 +146,7 @@
         <div class="squareOffers__offer" data-section="offerMeasurement">
           <div class="squareOffers__priceWrap">
             <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/noteBlck.svg" alt="offer image">
+              <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
             </div>
             <p class="squareOffers__price">40 <span class="squareOffers__price--currency">zł</span></p>
           </div>
@@ -188,7 +188,7 @@
           </div>
           <div class="squareOffers__offer squareOffers__offer--landscape" data-sectionin="offerConsultation">
             <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/appleBlck.svg" alt="offer image">
+              <img class="squareOffers__imgWrap--img" src="svg/noteBlck.svg" alt="offer image">
             </div>
             <h4 class="squareOffers__head">Czego się dowiesz na konsultacji</h4>
             <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
@@ -200,7 +200,7 @@
           </div>
           <div class="squareOffers__offer squareOffers__offer--landscape" data-sectionin="offerMeasurement">
             <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/appleBlck.svg" alt="offer image">
+              <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
             </div>
             <h4 class="squareOffers__head">Jak wygląda pomiar i analiza wyników</h4>
             <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
@@ -278,19 +278,11 @@
       <div class="contactWrap">
         <div class="contact__localization localization">
           <address class="localization__address">
-            <span class="localization__wrapAdressElement localization__wrapAdressElement--name">
-              <p>Dominika Treszczotko</p>
-            </span>
-            <span class="localization__wrapAdressElement localization__wrapAdressElement--town">
-              <p>Gliwice 44-100, ul. Zwycięstwa 30</p>
-            </span>
-            <span class="localization__wrapAdressElement">
-              <a class="localization__email" href="mailto: trzeszczotko@gmail.com">trzeszczotko@gmail.com</a>
-            </span>
-            <span class="localization__wrapAdressElement">
-              <a class="localization__tel" href="tel:+517234234">tel.
+            <p class="localization__name">Dominika Treszczotko</p>
+            <p class="localization__town">Gliwice 44-100, ul. Zwycięstwa 30</p>
+            <a class="localization__email" href="mailto: trzeszczotko@gmail.com">trzeszczotko@gmail.com</a>
+            <a class="localization__tel" href="tel:+517234234">tel.
                 517-234-234</a>
-            </span>
           </address>
           <p class="contact__info">Wolisz kontakt emailowy ? Nie ma problemu !
             Wypełnij formularz i wyślij mi wiadomość,
@@ -299,22 +291,25 @@
             <input type="text" aria-label="name" class="name contact__name" id="name" placeholder="imię" type="text">
             <input type="text" aria-label="email" class="email contact__email" id="email" placeholder="email"
               type="text">
+            <input type="text" aria-label="tel" class="tel contact__tel" id="tel" placeholder="telefon" type="text">
             <textarea type="text" aria-label="message" class="message contact__message" id="message"
               placeholder="wiadomość" type="text"></textarea>
             <button class="button contact__button">wyślij</button>
           </div>
         </div>
         <div class="contact__img">
-            <div class="columnImages__wrap">
-              <img class="columnImages__blob" src="svg/blobOrg.svg" alt="blob">
-              <img class="columnImages__blobSmall" src="svg/blobOrg.svg" alt="blob">
-              <img class="columnImages__imgDietitian columnImages__imgDietitian--note" src="svg/dietNote.svg" alt="dietitian">
-            </div>      
+          <div class="columnImages__wrap">
+            <img class="columnImages__blob" src="svg/blobOrg.svg" alt="blob">
+            <img class="columnImages__blobSmall" src="svg/blobOrg.svg" alt="blob">
+            <img class="columnImages__imgDietitian columnImages__imgDietitian--note" src="svg/dietNote.svg"
+              alt="dietitian">
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
+    <p class="footer__decription">Created by: dsgnow &copy 2021</p>
   </footer>
   <script src='js/jquery.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>

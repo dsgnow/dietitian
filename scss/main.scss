@@ -829,7 +829,8 @@ p,
     display: flex;
     flex-direction: column;
     flex-basis: 49vw;
-    min-height: 250px;
+    min-height: 700px;
+    height: auto;
 
     @media (orientation: landscape) and (min-width: 1200px) {
         flex-basis: 35vw;

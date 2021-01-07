@@ -8,7 +8,7 @@ const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffer
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 const allOffers = document.querySelectorAll('.squareOffers__offer');
 
-navAllLinks.forEach(function (navLink) {
+navAllLinks.forEach( (navLink) => {
     navLink.addEventListener('click', function (e) {
 
         e.preventDefault();
@@ -27,7 +27,7 @@ navAllLinks.forEach(function (navLink) {
     })
 })
 
-navAllBurgerLinks.forEach(function (navBurgerLink) {
+navAllBurgerLinks.forEach( (navBurgerLink) => {
 
     navBurgerLink.addEventListener('click', function (e) {
         e.preventDefault();
@@ -45,7 +45,7 @@ navAllBurgerLinks.forEach(function (navBurgerLink) {
     })
 })
 
-boxBurger.addEventListener('click', function (e) {
+boxBurger.addEventListener('click',  (e) => {
     e.preventDefault();
     hambButton.classList.toggle('navBurgerBox__btn--active');
     hambButton.classList.toggle('navBurgerBox__btn--notActive');
@@ -55,7 +55,7 @@ boxBurger.addEventListener('click', function (e) {
 })
 
 // changes on scrolll //
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
 
     var isSafari = window.safari !== undefined;
     let bodyelem = '';
@@ -85,7 +85,7 @@ window.addEventListener('scroll', function () {
 
 //TESTIMONIAL
 
-jQuery(document).ready(function($) {
+jQuery(document).ready( ($) => {
     "use strict";
     //  TESTIMONIALS CAROUSEL HOOK
     $('#customers-testimonials').owlCarousel({

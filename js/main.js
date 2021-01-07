@@ -10,7 +10,7 @@ const allOffers = document.querySelectorAll('.squareOffers__offer');
 
 navAllLinks.forEach(function (navLink) {
     navLink.addEventListener('click', function (e) {
-        
+
         e.preventDefault();
         const element = document.querySelector("[data-sectionin=" + this.dataset.section + "]");
         const offset = 100;
@@ -19,7 +19,7 @@ navAllLinks.forEach(function (navLink) {
         const elementPosition = elementRect - bodyRect;
         const offsetPosition = elementPosition - offset;
 
-        window.scrollTo({
+        window.scroll({
             top: offsetPosition,
             behavior: 'smooth'
         });

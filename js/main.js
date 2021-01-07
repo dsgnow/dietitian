@@ -4,12 +4,13 @@ const hambButton = document.querySelector('.navBurgerBox__btn');
 const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
-const navAllLinks = document.querySelectorAll('.nav__link');
+const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffers__offer');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
+const allOffers = document.querySelectorAll('.squareOffers__offer');
 
 navAllLinks.forEach(function (navLink) {
     navLink.addEventListener('click', function (e) {
-
+        console.log(e);
         e.preventDefault();
         const element = document.querySelector("[data-sectionin=" + this.dataset.section + "]");
         const offset = 80;
@@ -25,7 +26,6 @@ navAllLinks.forEach(function (navLink) {
 
     })
 })
-
 
 navAllBurgerLinks.forEach(function (navBurgerLink) {
 
@@ -81,6 +81,7 @@ window.addEventListener('scroll', function () {
         nav.classList.remove('nav--basic');
     }
 })
+
 
 //TESTIMONIAL
 

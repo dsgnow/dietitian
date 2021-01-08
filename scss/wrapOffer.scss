@@ -129,15 +129,9 @@
 
     &__priceWrap {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-
-        @media (orientation: landscape) {
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row;
-        }
+        align-items: center;
     }
 
 

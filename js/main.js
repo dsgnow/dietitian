@@ -69,8 +69,7 @@ window.addEventListener('scroll', () => {
     const scrollValue = bodyelem.scrollY;
     const nav = document.querySelector('nav');
     const navList = document.querySelector('.nav__list');
-    const logo = document.querySelector('.stickyLogo');
-
+    
     if ((scrollValue < 20)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');

@@ -1,0 +1,10 @@
+.wrapStart {
+    @include wrapersDisplay;
+    height: 100vh;
+    margin-top: 50px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        margin-top: 150px;
+        margin-bottom: 0;
+    }
+}

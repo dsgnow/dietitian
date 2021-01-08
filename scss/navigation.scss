@@ -142,7 +142,7 @@
 
     100% {
 
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -150,7 +150,7 @@
 @keyframes navSmall {
     0% {
 
-        width: 100%;
+        width: 80%;
     }
 
     100% {
@@ -193,7 +193,7 @@
     position: fixed;
     justify-content: flex-end;
     align-items: flex-end;
-    top: 0;
+    top: 10px;
     right: 80px;
     z-index: 9999;
     transition: .3s ease-in-out;
@@ -225,7 +225,13 @@
         align-items: center;
         font-size: 15px;
         width: 70%;
-        background-color: white;
+        transition: .3s;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+
+        &--onTop {
+            box-shadow: none;
+        }
+
     }
 
     &__element {
@@ -236,10 +242,25 @@
         width: 100%;
         position: relative;
         transition: .3s;
+        margin: 0 0px;
+        background-color: white;
+
+        &--selected {
+            background-color: $orange;
+            color: white;
+
+            .nav__link {
+                color: white;
+            }
+        }
 
         &:hover {
             background-color: $orange;
             color: white;
+
+            .nav__link {
+                color: white;
+            }
         }
     }
 
@@ -251,12 +272,9 @@
         color: $black;
         line-height: 30px;
         width: 100%;
-        padding: 10px 15px;
+        padding: 10px 10px;
         border-bottom: 2px solid transparent;
-    }
-
-    &__link:hover {
-        color: white;
+        transition: .3s;
     }
 
 }

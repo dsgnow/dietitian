@@ -1,4 +1,3 @@
-// navigation //
 const hambPop = document.querySelector('.navBurger');
 const hambButton = document.querySelector('.navBurgerBox__btn');
 const hambSpan = document.querySelectorAll('.navBurgerBox__span');
@@ -28,8 +27,8 @@ navAllLinks.forEach( (navLink) => {
 })
 
 navAllBurgerLinks.forEach( (navBurgerLink) => {
-
     navBurgerLink.addEventListener('click', function (e) {
+
         e.preventDefault();
         hambActiveFlag = !hambActiveFlag;
         hambButton.classList.toggle('navBurgerBox__btn--active');
@@ -46,6 +45,7 @@ navAllBurgerLinks.forEach( (navBurgerLink) => {
 })
 
 boxBurger.addEventListener('click',  (e) => {
+
     e.preventDefault();
     hambButton.classList.toggle('navBurgerBox__btn--active');
     hambButton.classList.toggle('navBurgerBox__btn--notActive');
@@ -54,7 +54,6 @@ boxBurger.addEventListener('click',  (e) => {
     hambPop.style.display = 'block';
 })
 
-// changes on scrolll //
 window.addEventListener('scroll', () => {
 
     var isSafari = window.safari !== undefined;
@@ -69,25 +68,23 @@ window.addEventListener('scroll', () => {
     const windowHeight = bodyelem.innerHeight;
     const scrollValue = bodyelem.scrollY;
     const nav = document.querySelector('nav');
+    const navList = document.querySelector('.nav__list');
     const logo = document.querySelector('.stickyLogo');
 
-    // change nav color //
     if ((scrollValue < 20)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');
+        navList.classList.add('nav__list--onTop');
 
     } else if ((scrollValue < windowHeight)) {
         nav.classList.add('nav--transBgc');
         nav.classList.remove('nav--basic');
+        navList.classList.remove('nav__list--onTop');
     }
 })
 
-
-//TESTIMONIAL
-
 jQuery(document).ready( ($) => {
     "use strict";
-    //  TESTIMONIALS CAROUSEL HOOK
     $('#customers-testimonials').owlCarousel({
         loop: true,
         center: true,
@@ -110,3 +107,21 @@ jQuery(document).ready( ($) => {
         }
     });
 });
+
+const links = document.querySelectorAll('.nav__element');
+const sections = document.querySelectorAll('.wrapSection');
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while(--index && window.scrollY + 200 < sections[index].offsetTop) {}
+  
+  links.forEach((link) => link.classList.remove('nav__element--selected'));
+  links[index].classList.add('nav__element--selected');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
+
+
+

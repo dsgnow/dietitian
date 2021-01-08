@@ -1,0 +1,157 @@
+.contactWrap {
+    @include wrapersDisplay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    max-width: 1920px;
+    min-height: unset;
+    min-width: unset;
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1920px) {
+        margin: 0 auto;
+    }
+}
+
+.contact {
+    margin: 0 20px 20px;
+    min-height: 300px;
+
+    @media (min-width: 1024px) {
+        margin: 0 40px 40px;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 80px 80px;
+    }
+
+    @media (min-width: 1400px) {
+        margin-top: 120px;
+    }
+
+    &__head {
+        margin-bottom: 20px;
+        width: 35vw;
+
+        @media (min-width: 1024px) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: 200px;
+
+    }
+
+    &__name,
+    &__email,
+    &__message,
+    &__tel {
+        font-size: 18px;
+        font-family: $mainFont;
+        padding: 5px 0;
+        margin: 5px 0;
+        border: unset;
+        border-bottom: 1px solid $black;
+        min-height: 7vh;
+        width: 90%;
+    }
+
+    &__message {
+        min-height: 15vh;
+        margin-top: 20px;
+    }
+
+    &__button {
+        width: 130px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &--note {
+            height: 80%;
+
+            @media (orientation: landscape) and (min-width: 1024px) {
+                height: 100%;
+            }
+        }
+    }
+
+    &__info {
+        font-size: 12px;
+        max-width: 80%;
+
+        @media (orientation: landscape) {
+            max-width: 50%;
+        }
+
+        @media (orientation: landscape) and (min-width: 1024px) {
+            font-size: 17px;
+            max-width: 60%;
+        }
+    }
+}
+
+.columnImages__imgDietitian--note {
+    width: 60%;
+}
+
+.localization {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 49vw;
+    min-height: 700px;
+    height: auto;
+
+    @media (orientation: landscape) and (min-width: 1200px) {
+        flex-basis: 35vw;
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+
+        & p,
+        & a,
+        .contact__info {
+
+            font-weight: 400;
+            font-size: 15px;
+            color: $grey;
+            margin: 0;
+
+            @media (orientation: landscape) and (min-width: 1024px) {
+                font-size: 20px;
+                line-height: 1.5;
+                max-width: 40vw;
+            }
+        }
+
+        & .localization__name {
+            font-weight: 800;
+            margin-bottom: 5px;
+            font-size: 17px;
+
+            @media (min-width: 1024px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+
+
+}

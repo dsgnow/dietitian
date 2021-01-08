@@ -1,0 +1,127 @@
+.wrapStart {
+    @include wrapersDisplay;
+    height: 100vh;
+    margin-top: 50px;
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        margin-top: 150px;
+        margin-bottom: 0;
+    }
+}
+
+.wrapAbout {
+    @include wrapersDisplay;
+    margin-bottom: 30px;
+
+    @media (orientation: portrait) {
+        margin-top: 50px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        margin-top: 0;
+    }
+}
+
+.columnTexts {
+    margin: 0 20px 20px;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: justify;
+
+    &--about {
+        align-items: flex-end;
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        max-width: 80%;
+    }
+
+    @media (orientation: landscape) {
+        max-width: 50%;
+
+    }
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+        max-width: 30%;
+        margin: 0 40px 0;
+    }
+
+    @media (orientation: landscape) and (min-width: 1200px) {
+        margin: 50px 80px 0;
+    }
+
+    @media (orientation: landscape) and (min-width: 1300px) {
+        margin-top: 100px;
+    }
+}
+
+.columnImages {
+    max-width: 80%;
+    min-height: 200px;
+    flex-grow: 4;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+
+    @media (orientation: portrait) and (min-height: 600px) {
+        max-width: 90%;
+    }
+
+    @media (orientation: portrait) and (min-height: 768px) {
+        width: 90%;
+    }
+
+    @media (orientation: landscape) {
+        max-width: 50%;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 70%;
+    }
+
+    &__wrap {
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+
+        @media (orientation: portrait) and (min-height: 768px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__imgDietitian {
+        width: 100%;
+        margin-bottom: -5px;
+        z-index: 999;
+
+        @media (orientation: landscape) {
+            width: 90%;
+        }
+    }
+
+    &__blob {
+        position: absolute;
+        left: 0%;
+        animation: bulb linear 4s infinite;
+        width: 100%;
+        right: auto;
+        z-index: -1;
+    }
+
+    &__blobSmall {
+        position: absolute;
+        left: 2%;
+        animation: bulbSmall linear 6s infinite;
+        width: 90%;
+        right: auto;
+        z-index: -1;
+    }
+
+}

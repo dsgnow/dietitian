@@ -38,4 +38,91 @@
   background-color: white;
   color: #FF6F41;
 }
+
+h1,
+h2,
+h3,
+h4,
+.columnTexts__head {
+  font-weight: 600px;
+  font-size: 40px;
+  color: #333333;
+  line-height: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #FF6F41;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  .columnTexts__head {
+    font-size: 50px;
+    line-height: 45px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 35px;
+    line-height: 30px;
+  }
+}
+
+h4 {
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+@media (orientation: landscape) {
+  h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+p,
+.columnTexts__descriptionText {
+  font-weight: 400;
+  font-size: 15px;
+  color: #727272;
+  margin: 20px 0 25px;
+}
+
+@media (min-width: 1024px) {
+  p,
+  .columnTexts__descriptionText {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
 /*# sourceMappingURL=variables.css.map */

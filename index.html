@@ -21,10 +21,8 @@
   <meta property="og:description"
     content="Chcesz się zacząć zdrowo odżywiać? Zacznij już dziś! Dominika Treszczotko - dietetyk kliniczny." />
   <meta property="og:type" content="article" />
-
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
   <link rel="stylesheet" href="css/style.css">
-
   <title>Dietitian</title>
 </head>
 
@@ -34,9 +32,9 @@
       <img class="stickyLogo__logo" src="svg/dietLogo.svg" alt="logo dietitian"></img>
     </div>
     <nav class="nav nav--basic">
-      <ul class="nav__list">
+      <ul class="nav__list nav__list--onTop">
         <li class="nav__element">
-          <a class="nav__link nav__link--start nav__link--selected" data-section="nav__link--start" href="#">Start</a>
+          <a class="nav__link nav__link--start" data-section="nav__link--start" href="#">Start</a>
         </li>
         <li class="nav__element">
           <a class="nav__link nav__link--about " data-section="nav__link--about" href="#">O mnie</a>
@@ -84,7 +82,7 @@
     </div>
   </header>
   <main>
-    <div class="wrapStart" data-sectionin="nav__link--start">
+    <div class="wrapStart wrapSection" data-sectionin="nav__link--start">
       <section class="columnTexts">
         <h1 class="columnTexts__head">Dietetyka kliniczna</h1>
         <p class="columnTexts__descriptionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ea optio
@@ -102,7 +100,7 @@
         </div>
       </section>
     </div>
-    <div class="wrapAbout" data-sectionin="nav__link--about">
+    <div class="wrapAbout wrapSection" data-sectionin="nav__link--about">
       <section class="columnTexts columnTexts--about">
         <h2 class="columnTexts__head columnTexts__head--Odd">Dominika Treszczotko</h2>
         <p class="columnTexts__descriptionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
@@ -121,58 +119,62 @@
         </div>
       </section>
     </div>
-    <div class="wrapOffer" data-sectionin="nav__link--offer">
-      <div class="wrapOffer__wave wrapOffer__wave--top">
-        <img class="wrapOffer__img wrapOffer__img--top" src="svg/topBlockEnd.svg" alt="wave">
+    <div class="wrapSection wrapSection--bgcGrey">
+      <div class="wrapOffer" data-sectionin="nav__link--offer">
+        <div class="wrapOffer__wave wrapOffer__wave--top">
+          <img class="wrapOffer__img wrapOffer__img--top" src="svg/topBlockEnd.svg" alt="wave">
+        </div>
+        <h3 class="wrapOffer__head">Oferta</h3>
+        <section class="squareOffers">
+          <div class="squareOffers__offer" data-section="offerFirst">
+            <div class="squareOffers__priceWrap">
+              <div class="squareOffers__imgWrap">
+                <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
+              </div>
+              <p class="squareOffers__price">150 <span class="squareOffers__price--currency">zł</span></p>
+            </div>
+            <h4 class="squareOffers__head">Pierwsza wizyta</h4>
+            <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit amet
+              conectus. </p>
+          </div>
+          <div class="squareOffers__offer" data-section="offerPlan">
+            <div class="squareOffers__priceWrap">
+              <div class="squareOffers__imgWrap">
+                <img class="squareOffers__imgWrap--img" src="svg/heartBlck.svg" alt="offer image">
+              </div>
+              <p class="squareOffers__price">300 <span class="squareOffers__price--currency">zł</span></p>
+            </div>
+            <h4 class="squareOffers__head">Plan żywieniowy</h4>
+            <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Even
+              aspicetes
+              evones emor. </p>
+          </div>
+          <div class="squareOffers__offer" data-section="offerConsultation">
+            <div class="squareOffers__priceWrap">
+              <div class="squareOffers__imgWrap">
+                <img class="squareOffers__imgWrap--img" src="svg/noteBlck.svg" alt="offer image">
+              </div>
+              <p class="squareOffers__price">70 <span class="squareOffers__price--currency">zł</span></p>
+            </div>
+            <h4 class="squareOffers__head">Konsultacja</h4>
+            <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. </p>
+          </div>
+          <div class="squareOffers__offer" data-section="offerMeasurement">
+            <div class="squareOffers__priceWrap">
+              <div class="squareOffers__imgWrap">
+                <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
+              </div>
+              <p class="squareOffers__price">40 <span class="squareOffers__price--currency">zł</span></p>
+            </div>
+            <h4 class="squareOffers__head">Pomiar</h4>
+            <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </section>
       </div>
-      <h3 class="wrapOffer__head">Oferta</h3>
-      <section class="squareOffers">
-        <div class="squareOffers__offer" data-section="offerFirst">
-          <div class="squareOffers__priceWrap">
-            <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
-            </div>
-            <p class="squareOffers__price">150 <span class="squareOffers__price--currency">zł</span></p>
-          </div>
-          <h4 class="squareOffers__head">Pierwsza wizyta</h4>
-          <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit amet
-            conectus. </p>
-        </div>
-        <div class="squareOffers__offer" data-section="offerPlan">
-          <div class="squareOffers__priceWrap">
-            <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/heartBlck.svg" alt="offer image">
-            </div>
-            <p class="squareOffers__price">300 <span class="squareOffers__price--currency">zł</span></p>
-          </div>
-          <h4 class="squareOffers__head">Plan żywieniowy</h4>
-          <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Even aspicetes
-            evones emor. </p>
-        </div>
-        <div class="squareOffers__offer" data-section="offerConsultation">
-          <div class="squareOffers__priceWrap">
-            <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/noteBlck.svg" alt="offer image">
-            </div>
-            <p class="squareOffers__price">70 <span class="squareOffers__price--currency">zł</span></p>
-          </div>
-          <h4 class="squareOffers__head">Konsultacja</h4>
-          <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. </p>
-        </div>
-        <div class="squareOffers__offer" data-section="offerMeasurement">
-          <div class="squareOffers__priceWrap">
-            <div class="squareOffers__imgWrap">
-              <img class="squareOffers__imgWrap--img" src="svg/scaleBlck.svg" alt="offer image">
-            </div>
-            <p class="squareOffers__price">40 <span class="squareOffers__price--currency">zł</span></p>
-          </div>
-          <h4 class="squareOffers__head">Pomiar</h4>
-          <p class="squareOffers__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-        </div>
-      </section>
-      <div class="wrapImageAndLandscape">
+      <div class="wrapImageAndLandscape wrapSection">
         <section class="imageOffers">
           <div class="imageOffers__wrap">
             <img class="imageOffers__wrap--img" src="img/food.jpg" alt="food">
@@ -228,14 +230,12 @@
               voluptatibus impedit in quaerat, optio adipisci quis?</p>
           </div>
         </section>
-      </div>
-      <div class="wrapOffer__wave wrapOffer__wave--bot">
-        <img class="wrapOffer__img wrapOffer__img--bot" src="svg/botBlockEnd.svg" alt="wave">
+        <div class="wrapOffer__wave wrapOffer__wave--bot">
+          <img class="wrapOffer__img wrapOffer__img--bot" src="svg/botBlockEnd.svg" alt="wave">
+        </div>
       </div>
     </div>
-    <!-- TESTIMONIALS owl carousel -->
     <section class="testimonials">
-      <!-- <h3 class="testimonials__head">Opinie</h3> -->
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -295,7 +295,7 @@
         </div>
       </div>
     </section>
-    <section data-sectionin="nav__link--contact" class="contact">
+    <section data-sectionin="nav__link--contact" class="contact wrapSection">
       <h3 class="contact__head">Kontakt</h3>
       <div class="contactWrap">
         <div class="contact__localization localization">
@@ -331,7 +331,9 @@
     </section>
   </main>
   <footer class="footer">
-    <p class="footer__decription">Created by: dsgnow &copy 2021</p>
+    <p class="footer__decription">Treszczotko - dietetyka &copy 2021</p>
+    <img class="footer__logo" src="svg/dietLogo.svg" alt="treszczotko logo">
+    <p class="footer__decription">Created by: dsgnow</p>
   </footer>
   <script src='js/jquery.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>

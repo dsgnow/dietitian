@@ -146,12 +146,17 @@
         display: flex;
         flex-direction: column;
         background-color: white;
-        padding: 20px;
+        padding: 30px;
         margin: 20px 0;
         border-radius: 10px;
+        width: 98%;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 13px 9px rgba(0, 0, 0, 0.01);
+        border-bottom: 7px solid $orange;
         transition: .3s;
-        width: 48%;
-        // box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 13px 9px rgba(0, 0, 0, 0.01);
+
+        @media (orientation: landscape) {
+            width: 48%;
+        }
 
         @media (orientation: landscape) and (min-width: 1024px) {
             width: 24%;
@@ -160,6 +165,8 @@
 
         &--landscape {
             width: 100%;
+            box-shadow: none;
+            border-bottom: none;
 
             @media (orientation: landscape) and (min-width: 1024px) {
                 width: 100%;
@@ -184,7 +191,7 @@
         margin: 0 0 10px;
         font-size: 35px;
         font-weight: 800;
-        color: $grey;
+        color: $orange;
         transition: .3s;
 
         &--currency {
@@ -192,7 +199,7 @@
             margin-left: -5px;
             font-weight: 600;
             font-size: 25px;
-            color: $grey;
+            color: $orange;
             transition: .3s;
         }
 
@@ -257,6 +264,7 @@
     &__offer:hover {
 
         background-color: $mainColorDarker;
+        border-bottom: 7px solid $mainColorDarkerPlus;
 
         .squareOffers__imgWrap {
             background-color: $mainColor;
@@ -272,6 +280,10 @@
         .squareOffers__price--currency {
             color: white;
         }
+    }
+
+    &__offer--landscape:hover {
+        border-bottom: none;
     }
 
 }

@@ -465,7 +465,7 @@ p,
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  top: 10px;
+  top: 0;
   right: 80px;
   z-index: 9999;
   -webkit-transition: .3s ease-in-out;
@@ -1209,7 +1209,7 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  text-align: justify;
+  text-align: left;
 }
 
 .columnTexts--about {
@@ -1560,12 +1560,21 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  padding: 20px;
+  padding: 30px;
   margin: 20px 0;
   border-radius: 10px;
+  width: 98%;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
+  border-bottom: 7px solid #FF6F41;
   -webkit-transition: .3s;
   transition: .3s;
-  width: 48%;
+}
+
+@media (orientation: landscape) {
+  .squareOffers__offer {
+    width: 48%;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -1577,6 +1586,9 @@ footer {
 
 .squareOffers__offer--landscape {
   width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: none;
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -1605,7 +1617,7 @@ footer {
   margin: 0 0 10px;
   font-size: 35px;
   font-weight: 800;
-  color: #727272;
+  color: #FF6F41;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1615,7 +1627,7 @@ footer {
   margin-left: -5px;
   font-weight: 600;
   font-size: 25px;
-  color: #727272;
+  color: #FF6F41;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1688,6 +1700,7 @@ footer {
 
 .squareOffers__offer:hover {
   background-color: #40B7E0;
+  border-bottom: 7px solid #1d4f5f;
 }
 
 .squareOffers__offer:hover .squareOffers__imgWrap {
@@ -1704,6 +1717,10 @@ footer {
 .squareOffers__offer:hover .squareOffers__price,
 .squareOffers__offer:hover .squareOffers__price--currency {
   color: white;
+}
+
+.squareOffers__offer--landscape:hover {
+  border-bottom: none;
 }
 
 .imageOffers {

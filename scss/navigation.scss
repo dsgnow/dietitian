@@ -224,7 +224,7 @@
         background-color: white;
 
         &--selected {
-            background-color: $orange;
+            background-color: $mainColor--btn;
             color: white;
 
             .nav__link {
@@ -233,7 +233,7 @@
         }
 
         &:hover {
-            background-color: $orange;
+            background-color: $mainColor--btn;
             color: white;
 
             .nav__link {

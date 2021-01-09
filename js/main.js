@@ -3,6 +3,7 @@ const hambButton = document.querySelector('.navBurgerBox__btn');
 const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
+const navigation = document.querySelector('.nav');
 const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffers__offer');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 const allOffers = document.querySelectorAll('.squareOffers__offer');
@@ -122,9 +123,8 @@ function changeLinkState() {
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 
-const navigation = document.querySelector('.nav');
-var lastScrollTop = 0;
 
+var lastScrollTop = 0;
 function hideNav () {
     var st = this.scrollY;
         

@@ -3,19 +3,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-    width: 100vw;
-    max-width: 1920px;
+    align-items: center;
+    width: 100%;
     min-height: unset;
     min-width: unset;
 
     @media (orientation: landscape) {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     @media (min-width: 1920px) {
         margin: 0 auto;
+        max-width: 1920px;
     }
 }
 
@@ -48,8 +48,23 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        min-height: 200px;
+        background-color: white;
+        padding: 30px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 13px 9px rgba(0, 0, 0, 0.01);
+        transition: .3s;
+    }
 
+    &__label {
+        color: $lightGrey;
+        text-transform: uppercase;
+        font-size: 0.625rem;
+        margin-top: 20px;
+
+        &--message {
+            margin: 60px 0 20px;
+        }
     }
 
     &__name,
@@ -59,7 +74,7 @@
         font-size: 18px;
         font-family: $mainFont;
         padding: 5px 0;
-        margin: 5px 0;
+        margin: 0;
         border: unset;
         border-bottom: 1px solid $black;
         min-height: 7vh;
@@ -68,7 +83,6 @@
 
     &__message {
         min-height: 15vh;
-        margin-top: 20px;
     }
 
     &__button {
@@ -80,13 +94,22 @@
     &__img {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
+        width: 70%;
+
+        @media (orientation: landscape) {
+            align-self: flex-end;
+        }
+
+        @media (orientation: landscape) and (min-width: 1024px) {
+            width: 40%;
+            margin-left: 100px;
+        }
 
         &--note {
-            height: 80%;
+            height: 60%;
 
             @media (orientation: landscape) and (min-width: 1024px) {
-                height: 100%;
+                margin-left: 50px;
             }
         }
     }
@@ -106,6 +129,7 @@
     }
 }
 
+
 .columnImages__imgDietitian--note {
     width: 60%;
 }
@@ -113,12 +137,13 @@
 .localization {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     flex-basis: 49vw;
-    min-height: 700px;
     height: auto;
 
     @media (orientation: landscape) and (min-width: 1200px) {
-        flex-basis: 35vw;
+        flex-basis: 55vw;
     }
 
     &__address {

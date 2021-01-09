@@ -23,7 +23,7 @@ input:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF6F41;
+  background: #73D9ED;
 }
 
 .nav__link {
@@ -32,7 +32,7 @@ input:focus {
 }
 
 .button {
-  background-color: #FF6F41;
+  background-color: #73D9ED;
   color: white;
   outline: none;
   border: 2px solid transparent;
@@ -48,9 +48,9 @@ input:focus {
 }
 
 .button:hover {
-  border: 2px solid #FF6F41;
+  border: 2px solid #73D9ED;
   background-color: white;
-  color: #FF6F41;
+  color: #73D9ED;
 }
 
 h1,
@@ -63,7 +63,7 @@ h4,
   color: #333333;
   line-height: 40px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #FF6F41;
+  border-bottom: 2px solid #73D9ED;
   width: 100%;
 }
 
@@ -550,7 +550,7 @@ p,
 }
 
 .nav__element--selected {
-  background-color: #FF6F41;
+  background-color: #73D9ED;
   color: white;
 }
 
@@ -559,7 +559,7 @@ p,
 }
 
 .nav__element:hover {
-  background-color: #FF6F41;
+  background-color: #73D9ED;
   color: white;
 }
 
@@ -1575,7 +1575,7 @@ footer {
   width: 98%;
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
           box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
-  border-bottom: 7px solid #FF6F41;
+  border-bottom: 7px solid #73D9ED;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1626,7 +1626,7 @@ footer {
   margin: 0 0 10px;
   font-size: 35px;
   font-weight: 800;
-  color: #FF6F41;
+  color: #73D9ED;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1636,7 +1636,7 @@ footer {
   margin-left: -5px;
   font-weight: 600;
   font-size: 25px;
-  color: #FF6F41;
+  color: #73D9ED;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1708,24 +1708,8 @@ footer {
 }
 
 .squareOffers__offer:hover {
-  background-color: #40B7E0;
-  border-bottom: 7px solid #1d4f5f;
-}
-
-.squareOffers__offer:hover .squareOffers__imgWrap {
-  background-color: #73D9ED;
-}
-
-.squareOffers__offer:hover .squareOffers__imgWrap--img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
-
-.squareOffers__offer:hover .squareOffers__head,
-.squareOffers__offer:hover .squareOffers__description,
-.squareOffers__offer:hover .squareOffers__price,
-.squareOffers__offer:hover .squareOffers__price--currency {
-  color: white;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .squareOffers__offer--landscape:hover {
@@ -1872,7 +1856,7 @@ footer {
 }
 
 .testimonial-name {
-  background-color: #FF6F41;
+  background-color: #73D9ED;
   color: white;
   outline: none;
   border: 2px solid transparent;
@@ -1930,7 +1914,7 @@ footer {
 
 #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
 #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
-  background: #FF6F41;
+  background: #73D9ED;
   -webkit-transform: translate3d(0px, -50%, 0px) scale(0.7);
           transform: translate3d(0px, -50%, 0px) scale(0.7);
 }
@@ -1946,7 +1930,7 @@ footer {
 }
 
 #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
-  background: #FF6F41;
+  background: #73D9ED;
   display: inline-block;
   height: 20px;
   margin: 0 2px 5px;
@@ -1980,11 +1964,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  width: 100vw;
-  max-width: 1920px;
+  align-items: center;
+  width: 100%;
   min-height: unset;
   min-width: unset;
 }
@@ -2013,15 +1994,16 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
 @media (min-width: 1920px) {
   .contactWrap {
     margin: 0 auto;
+    max-width: 1920px;
   }
 }
 
@@ -2069,14 +2051,32 @@ footer {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  min-height: 200px;
+  background-color: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__label {
+  color: #9e9e9e;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  margin-top: 20px;
+}
+
+.contact__label--message {
+  margin: 60px 0 20px;
 }
 
 .contact__name, .contact__email, .contact__message, .contact__tel {
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
   padding: 5px 0;
-  margin: 5px 0;
+  margin: 0;
   border: unset;
   border-bottom: 1px solid #333333;
   min-height: 7vh;
@@ -2085,7 +2085,6 @@ footer {
 
 .contact__message {
   min-height: 15vh;
-  margin-top: 20px;
 }
 
 .contact__button {
@@ -2102,18 +2101,30 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 70%;
+}
+
+@media (orientation: landscape) {
+  .contact__img {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .contact__img {
+    width: 40%;
+    margin-left: 100px;
+  }
 }
 
 .contact__img--note {
-  height: 80%;
+  height: 60%;
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
   .contact__img--note {
-    height: 100%;
+    margin-left: 50px;
   }
 }
 
@@ -2147,16 +2158,20 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-preferred-size: 49vw;
       flex-basis: 49vw;
-  min-height: 700px;
   height: auto;
 }
 
 @media (orientation: landscape) and (min-width: 1200px) {
   .localization {
-    -ms-flex-preferred-size: 35vw;
-        flex-basis: 35vw;
+    -ms-flex-preferred-size: 55vw;
+        flex-basis: 55vw;
   }
 }
 

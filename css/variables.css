@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF6F41;
+  background: #73D9ED;
 }
 
 .nav__link {
@@ -18,7 +18,7 @@
 }
 
 .button {
-  background-color: #FF6F41;
+  background-color: #73D9ED;
   color: white;
   outline: none;
   border: 2px solid transparent;
@@ -34,9 +34,9 @@
 }
 
 .button:hover {
-  border: 2px solid #FF6F41;
+  border: 2px solid #73D9ED;
   background-color: white;
-  color: #FF6F41;
+  color: #73D9ED;
 }
 
 h1,
@@ -49,7 +49,7 @@ h4,
   color: #333333;
   line-height: 40px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #FF6F41;
+  border-bottom: 2px solid #73D9ED;
   width: 100%;
 }
 

@@ -122,5 +122,24 @@ function changeLinkState() {
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 
+const navigation = document.querySelector('.nav');
+var lastScrollTop = 0;
+
+function hideNav () {
+    var st = this.scrollY;
+        
+    if (st > lastScrollTop) {
+    setTimeout(function(){
+        navigation.classList.add('nav--opacityNone');
+    }, 300);
+    } else {
+        navigation.classList.remove('nav--opacityNone');
+    }
+
+    lastScrollTop = st;           
+}
+
+window.addEventListener('scroll', hideNav);
+
 
 

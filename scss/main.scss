@@ -57,12 +57,16 @@ footer {
 
 
     &__decription {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-self: center;
         height: auto;
         margin: 0;
         font-family: inherit;
         color: $grey;
         font-size: 8px;
+        flex-basis: 33%;
 
         @media (orientation: landscape) {
             font-size: 12px;
@@ -74,6 +78,10 @@ footer {
     }
 
     &__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-basis: 33%;
         max-height: 50%;
         align-self: center;
         filter: brightness(0) invert(1);

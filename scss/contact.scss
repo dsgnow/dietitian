@@ -77,12 +77,12 @@
         margin: 0;
         border: unset;
         border-bottom: 1px solid $black;
-        min-height: 7vh;
+        min-height: 50px;
         width: 90%;
     }
 
     &__message {
-        min-height: 15vh;
+        min-height: 70px;
     }
 
     &__button {

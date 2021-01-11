@@ -2251,12 +2251,12 @@ footer {
   margin: 0;
   border: unset;
   border-bottom: 1px solid #333333;
-  min-height: 7vh;
+  min-height: 50px;
   width: 90%;
 }
 
 .contact__message {
-  min-height: 15vh;
+  min-height: 70px;
 }
 
 .contact__button {

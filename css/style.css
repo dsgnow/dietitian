@@ -1133,7 +1133,7 @@ footer {
           align-items: center;
   width: 100vw;
   padding: 10px 0;
-  background-color: #333333;
+  background-color: #111111;
   height: auto;
 }
 
@@ -1508,7 +1508,7 @@ footer {
 
 @media (orientation: landscape) {
   .columnImages__imgDietitian--nutritionist {
-    width: 50%;
+    width: 60%;
   }
 }
 

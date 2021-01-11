@@ -2123,52 +2123,30 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
+  min-height: unset;
+  min-width: unset;
   max-width: 1920px;
   min-width: 300px;
   min-height: 500px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: unset;
-  min-width: unset;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 640px) {
   .contactWrap {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-bottom: 50px;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 1024px) {
-  .contactWrap {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-@media (orientation: landscape) {
-  .contactWrap {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
   }
 }
 
@@ -2276,7 +2254,7 @@ footer {
   width: 70%;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 640px) {
   .contact__img {
     -ms-flex-item-align: end;
         align-self: flex-end;

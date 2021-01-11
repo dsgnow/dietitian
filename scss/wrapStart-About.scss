@@ -104,6 +104,15 @@
         @media (orientation: landscape) {
             width: 90%;
         }
+
+        &--nutritionist {
+            width: 70%;
+
+            @media (orientation: landscape) {
+                width: 50%;
+            }
+        }
+
     }
 
     &__blob {

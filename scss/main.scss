@@ -45,45 +45,168 @@ footer {
 
 .footer {
     width: 100%;
-    height: 6vh;
-    background-color: $black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.social {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    height: 50px;
+    background-color: $mainColor;
+    width: 100%;
 
-    @media (max-height: 500px) {
-        height: 15vh;
+    @media (orientation: landscape) {
+        height: 60px;
     }
 
+    @media (orientation: landscape) and (min-width: 768px) {
+        height: 70px;
+    }
 
-    &__decription {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    &__icon {
+        margin: 20px;
         align-self: center;
-        height: auto;
-        margin: 0;
-        font-family: inherit;
-        color: $grey;
-        font-size: 8px;
-        flex-basis: 33%;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        transition: .3s;
 
-        @media (orientation: landscape) {
-            font-size: 12px;
+        &:hover {
+            transform: scale(1.1);
         }
 
         @media (orientation: landscape) and (min-width: 768px) {
-            font-size: 14px;
+            margin: 50px;
+            font-size: 40px;
+        }
+    }
+}
+
+
+.decription {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    padding: 10px 0;
+    background-color: $black;
+    height: auto;
+
+    &__text {
+        margin: 0;
+        font-family: inherit;
+        color: $grey;
+        font-size: 10px;
+        width: 33%;
+        text-align: center;
+        margin: 0 5px;
+
+        @media (orientation: landscape) {
+            font-size: 15px;
+            margin: 0 15px;
+        }
+
+        @media (orientation: landscape) and (min-width: 768px) {
+            margin: 0 35px;
         }
     }
 
-    &__logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-basis: 33%;
-        max-height: 50%;
-        align-self: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+
+
+    &__text {
+        font-size: 12px;
+        margin: 5px 0;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (orientation: landscape) {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        @media (orientation: landscape) and (min-width: 768px) {
+            margin: 12px 0;
+        }
+
+        &--contact {
+
+            &:hover {
+                color: $grey;
+                cursor: auto;
+            }
+
+            font-size: 12px;
+            margin: 3px 0;
+
+            @media (orientation: landscape) {
+                font-size: 15px;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+.wrapLinks {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    flex-grow: 2;
+    margin: 0 20px;
+
+    & h5 {
+        color: white;
+        font-size: 14px;
+        margin: 10px 0 15px;
+
+        @media (orientation: landscape) and (min-width: 768px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.wrapLogo {
+    align-self: center;
+    margin: 0 10px;
+    flex-grow: 1;
+    display: none;
+
+    @media (orientation: landscape) {
+        display: block;
+    }
+
+    @media (orientation: landscape) and (min-width: 768px) {
+        margin: 0 100px;
+    }
+
+    &__img {
+        width: 100%;
         filter: brightness(0) invert(1);
+
+        @media (orientation: landscape) and (min-width: 768px) {
+            height: 90px;
+        }
     }
 }

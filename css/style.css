@@ -1046,60 +1046,121 @@ footer {
 
 .footer {
   width: 100%;
-  height: 6vh;
-  background-color: #333333;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 50px;
+  background-color: #73D9ED;
+  width: 100%;
+}
+
+@media (orientation: landscape) {
+  .social {
+    height: 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .social {
+    height: 70px;
+  }
+}
+
+.social__icon {
+  margin: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.social__icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .social__icon {
+    margin: 50px;
+    font-size: 40px;
+  }
+}
+
+.decription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-@media (max-height: 500px) {
-  .footer {
-    height: 15vh;
-  }
-}
-
-.footer__decription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  padding: 10px 0;
+  background-color: #333333;
   height: auto;
+}
+
+.decription__text {
   margin: 0;
   font-family: inherit;
   color: #727272;
-  font-size: 8px;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  font-size: 10px;
+  width: 33%;
+  text-align: center;
+  margin: 0 5px;
 }
 
 @media (orientation: landscape) {
-  .footer__decription {
-    font-size: 12px;
+  .decription__text {
+    font-size: 15px;
+    margin: 0 15px;
   }
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
-  .footer__decription {
-    font-size: 14px;
+  .decription__text {
+    margin: 0 35px;
   }
 }
 
-.footer__logo {
+.links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,13 +1171,113 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
-  max-height: 50%;
+  padding: 20px 0;
+  height: auto;
+  background-color: black;
+  width: 100%;
+}
+
+.links__text {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.links__text:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media (orientation: landscape) {
+  .links__text {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .links__text {
+    margin: 12px 0;
+  }
+}
+
+.links__text--contact {
+  font-size: 12px;
+  margin: 3px 0;
+}
+
+.links__text--contact:hover {
+  color: #727272;
+  cursor: auto;
+}
+
+@media (orientation: landscape) {
+  .links__text--contact {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+}
+
+.wrapLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  text-align: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin: 0 20px;
+}
+
+.wrapLinks h5 {
+  color: white;
+  font-size: 14px;
+  margin: 10px 0 15px;
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .wrapLinks h5 {
+    font-size: 18px;
+  }
+}
+
+.wrapLogo {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
+  margin: 0 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: none;
+}
+
+@media (orientation: landscape) {
+  .wrapLogo {
+    display: block;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .wrapLogo {
+    margin: 0 100px;
+  }
+}
+
+.wrapLogo__img {
+  width: 100%;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .wrapLogo__img {
+    height: 90px;
+  }
 }
 
 .wrapStart {
@@ -1338,6 +1499,16 @@ footer {
 @media (orientation: landscape) {
   .columnImages__imgDietitian {
     width: 90%;
+  }
+}
+
+.columnImages__imgDietitian--nutritionist {
+  width: 70%;
+}
+
+@media (orientation: landscape) {
+  .columnImages__imgDietitian--nutritionist {
+    width: 50%;
   }
 }
 

@@ -89,8 +89,8 @@
         </p>
         <button data-section="nav__link--about" class="button columnTexts__btn">czytaj dalej</button>
       </section>
-      <section class="columnImages">
-        <div class="columnImages__wrap">
+      <section class="columnImages" id="scene">
+        <div class="columnImages__wrap" data-depth="0.1">
           <img class="columnImages__blob" src="svg/blob.svg" alt="blob">
           <img class="columnImages__blobSmall" src="svg/blob.svg" alt="blob">
           <img class="columnImages__imgDietitian" src="svg/dietitianStart.svg" alt="animacja dietetyk">
@@ -112,7 +112,8 @@
         <div class="columnImages__wrap">
           <img class="columnImages__blob" src="svg/blob.svg" alt="blob">
           <img class="columnImages__blobSmall" src="svg/blob.svg" alt="blob">
-          <img class="columnImages__imgDietitian" src="svg/dietitian.svg" alt="animacja dietetyk">
+          <img class="columnImages__imgDietitian columnImages__imgDietitian--nutritionist" src="img/test2.png"
+            alt="animacja dietetyk">
         </div>
       </section>
     </div>
@@ -322,8 +323,8 @@
             <button class="button contact__button">wyślij</button>
           </div>
         </div>
-        <div class="contact__img">
-          <div class="columnImages__wrap">
+        <div class="contact__img" id="scene3">
+          <div class="columnImages__wrap" data-depth="0.1">
             <img class="columnImages__blob" src="svg/blobOrg.svg" alt="blob">
             <img class="columnImages__blobSmall" src="svg/blobOrg.svg" alt="blob">
             <img class="columnImages__imgDietitian columnImages__imgDietitian--note" src="svg/dietNote.svg"
@@ -334,13 +335,38 @@
     </section>
   </main>
   <footer class="footer">
-    <p class="footer__decription">Treszczotko - dietetyka &copy 2021</p>
-    <img class="footer__logo" src="svg/dietLogo.svg" alt="treszczotko logo">
-    <p class="footer__decription">Created by: dsgnow</p>
+    <div class="social">
+      <i class="fab fa-facebook social__icon"></i>
+      <i class="fab fa-instagram social__icon"></i>
+      <i class="fab fa-linkedin social__icon"></i>
+    </div>
+    <div class="links">
+      <div class="wrapLinks">
+        <h5>Przeczytaj</h5>
+        <p class="links__text" data-section="nav__link--about">O mnie</p>
+        <p class="links__text" data-section="nav__link--offer">Oferta</p>
+        <p class="links__text" data-section="nav__link--visit">Wizyta</p>
+      </div>
+      <div class="wrapLogo">
+        <img class="wrapLogo__img" src="svg/dietLogo.svg" alt="treszczotko logo">
+      </div>
+      <div class="wrapLinks">
+        <h5>Bądźmy w kontakcie</h5>
+        <p class="links__text--contact">trzeszczotko@gmail.com</p>
+        <p class="links__text--contact">Gliwice, Zwycięstwa 1</p>
+        <p class="links__text--contact">tel. 517 234 234</p>
+      </div>
+    </div>
+    <div class="decription">
+      <p class="decription__text">Treszczotko - dietetyka &copy 2021</p>
+      <p class="decription__text">Created by: dsgnow</p>
+    </div>
   </footer>
   <script src='js/jquery.js'></script>
+  <script src="https://kit.fontawesome.com/4b11486782.js" crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -4,11 +4,11 @@ const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
 const navigation = document.querySelector('.nav');
-const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffers__offer');
+const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffers__offer, .links__text');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 const allOffers = document.querySelectorAll('.squareOffers__offer');
 
-navAllLinks.forEach( (navLink) => {
+navAllLinks.forEach((navLink) => {
     navLink.addEventListener('click', function (e) {
 
         e.preventDefault();
@@ -27,7 +27,7 @@ navAllLinks.forEach( (navLink) => {
     })
 })
 
-navAllBurgerLinks.forEach( (navBurgerLink) => {
+navAllBurgerLinks.forEach((navBurgerLink) => {
     navBurgerLink.addEventListener('click', function (e) {
 
         e.preventDefault();
@@ -45,7 +45,7 @@ navAllBurgerLinks.forEach( (navBurgerLink) => {
     })
 })
 
-boxBurger.addEventListener('click',  (e) => {
+boxBurger.addEventListener('click', (e) => {
 
     e.preventDefault();
     hambButton.classList.toggle('navBurgerBox__btn--active');
@@ -70,7 +70,7 @@ window.addEventListener('scroll', () => {
     const scrollValue = bodyelem.scrollY;
     const nav = document.querySelector('nav');
     const navList = document.querySelector('.nav__list');
-    
+
     if ((scrollValue < 20)) {
         nav.classList.remove('nav--transBgc');
         nav.classList.add('nav--basic');
@@ -83,7 +83,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
-jQuery(document).ready( ($) => {
+jQuery(document).ready(($) => {
     "use strict";
     $('#customers-testimonials').owlCarousel({
         loop: true,
@@ -91,19 +91,19 @@ jQuery(document).ready( ($) => {
         items: 3,
         margin: 0,
         autoplay: true,
-        dots:true,
+        dots: true,
         autoplayTimeout: 4500,
         smartSpeed: 450,
         responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 2
-          },
-          1170: {
-            items: 3
-          }
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1170: {
+                items: 3
+            }
         }
     });
 });
@@ -112,12 +112,12 @@ const links = document.querySelectorAll('.nav__element');
 const sections = document.querySelectorAll('.wrapSection');
 
 function changeLinkState() {
-  let index = sections.length;
+    let index = sections.length;
 
-  while(--index && window.scrollY + 200 < sections[index].offsetTop) {}
-  
-  links.forEach((link) => link.classList.remove('nav__element--selected'));
-  links[index].classList.add('nav__element--selected');
+    while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
+
+    links.forEach((link) => link.classList.remove('nav__element--selected'));
+    links[index].classList.add('nav__element--selected');
 }
 
 changeLinkState();
@@ -125,21 +125,24 @@ window.addEventListener('scroll', changeLinkState);
 
 
 var lastScrollTop = 0;
-function hideNav () {
+
+function hideNav() {
     var st = this.scrollY;
-        
+
     if (st > lastScrollTop) {
-    setTimeout(function(){
-        navigation.classList.add('nav--opacityNone');
-    }, 300);
+        setTimeout(function () {
+            navigation.classList.add('nav--opacityNone');
+        }, 300);
     } else {
         navigation.classList.remove('nav--opacityNone');
     }
 
-    lastScrollTop = st;           
+    lastScrollTop = st;
 }
 
 window.addEventListener('scroll', hideNav);
 
-
-
+const scene = document.getElementById('scene');
+const scene3 = document.getElementById('scene3');
+const parallaxInstance = new Parallax(scene);
+const parallaxInstance3 = new Parallax(scene3);

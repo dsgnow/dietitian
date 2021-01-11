@@ -146,3 +146,4 @@ const scene = document.getElementById('scene');
 const scene3 = document.getElementById('scene3');
 const parallaxInstance = new Parallax(scene);
 const parallaxInstance3 = new Parallax(scene3);
+

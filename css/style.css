@@ -2123,10 +2123,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: unset;
-  min-width: unset;
   max-width: 1920px;
-  min-width: 300px;
   min-height: 500px;
   margin: 0 auto;
 }
@@ -2153,6 +2150,7 @@ footer {
 .contact {
   margin: 0 20px 20px;
   min-height: 600px;
+  width: auto;
 }
 
 @media (min-width: 1024px) {
@@ -2202,6 +2200,7 @@ footer {
           box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 13px 9px rgba(0, 0, 0, 0.01);
   -webkit-transition: .3s;
   transition: .3s;
+  min-height: 500px;
 }
 
 .contact__label {
@@ -2310,15 +2309,13 @@ footer {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-flex-preferred-size: 49vw;
-      flex-basis: 49vw;
+  width: 90vw;
   height: auto;
 }
 
 @media (orientation: landscape) and (min-width: 1200px) {
   .localization {
-    -ms-flex-preferred-size: 55vw;
-        flex-basis: 55vw;
+    width: 50vw;
   }
 }
 

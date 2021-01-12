@@ -4,10 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: unset;
-    min-width: unset;
     max-width: 1920px;
-    min-width: 300px;
     min-height: 500px;
     margin: 0 auto;
 
@@ -25,6 +22,7 @@
 .contact {
     margin: 0 20px 20px;
     min-height: 600px;
+    width: auto;
 
     @media (min-width: 1024px) {
         margin: 0 40px 40px;
@@ -57,6 +55,7 @@
         border-radius: 10px;
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 13px 9px rgba(0, 0, 0, 0.01);
         transition: .3s;
+        min-height: 500px;
     }
 
     &__label {
@@ -146,11 +145,11 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    flex-basis: 49vw;
+    width: 90vw;
     height: auto;
 
     @media (orientation: landscape) and (min-width: 1200px) {
-        flex-basis: 55vw;
+        width: 50vw;
     }
 
     &__address {

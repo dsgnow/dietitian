@@ -1927,18 +1927,11 @@ footer {
 .imageOffers__wrap {
   position: relative;
   border-radius: 20% 0 20% 0;
-  border: 5px solid white;
   width: 100%;
   height: 30vh;
   margin: 0 20px;
   overflow: hidden;
   background-color: white;
-}
-
-@media (min-width: 800px) {
-  .imageOffers__wrap {
-    border: 15px solid white;
-  }
 }
 
 @media (orientation: landscape) {

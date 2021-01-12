@@ -151,7 +151,6 @@ const parallaxInstance3 = new Parallax(scene3);
 $(".contact__button").click(function (e) {
     e.preventDefault();
 
-    console.log('dzialam');
     let errorText = $(".contact__errors");
 
     let contact__name = $(".contact__name").val();

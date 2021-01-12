@@ -4,7 +4,7 @@ const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
 const navigation = document.querySelector('.nav');
-const navAllLinks = document.querySelectorAll('.nav__link, .button, .squareOffers__offer, .links__text');
+const navAllLinks = document.querySelectorAll('.nav__link, columnTexts__btn, .squareOffers__offer, .links__text');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 const allOffers = document.querySelectorAll('.squareOffers__offer');
 
@@ -147,3 +147,92 @@ const scene3 = document.getElementById('scene3');
 const parallaxInstance = new Parallax(scene);
 const parallaxInstance3 = new Parallax(scene3);
 
+//send email
+$(".contact__button").click(function (e) {
+    e.preventDefault();
+
+    console.log('dzialam');
+    let errorText = $(".contact__errors");
+
+    let contact__name = $(".contact__name").val();
+    contact__name = DOMPurify.sanitize(contact__name);
+
+    let contact__email = $(".contact__email").val();
+    contact__email = DOMPurify.sanitize(contact__email);
+
+    let contact__message = $(".contact__message").val();
+    contact__message = DOMPurify.sanitize(contact__message);
+
+    let contact__tel = $(".contact__tel").val();
+    contact__message = DOMPurify.sanitize(contact__tel);
+
+    if (!$(".contact__name").val()) {
+        errorText.text("Podaj swoje imię.");
+        $(".contact__name").focus();
+        return false;
+    }
+
+    if (!$(".contact__email").val()) {
+        errorText.text("Podaj swój email.");
+        $(".contact__email").focus();
+        return false;
+    }
+
+    function validateEmail(email) {
+        let re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    const email = $(".contact__email").val();
+    if (validateEmail(email)) {
+        console.log("correct format");
+    } else {
+        errorText.text("Podaj poprawny email.");
+        $(".contact__email").focus();
+        return false;
+    }
+
+    if (!$(".contact__tel").val()) {
+        errorText.text("Podaj numer telefonu.");
+        $(".contact__tel").focus();
+        return false;
+    }
+
+    if (!$(".contact__message").val()) {
+        errorText.text("Uzupełnij wiadomość.");
+        $(".contact__message").focus();
+        return false;
+    }
+
+
+    $.ajax({
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded; charset=iso-8859-1",
+        url: "gmail.php",
+
+        data: {
+            contact__email: contact__email,
+            contact__name: contact__name,
+            contact__message: contact__message,
+            contact__tel: contact__tel
+        },
+
+        success: function (result) {
+
+            console.log(result);
+            if (result.replace(/\s/g, '') == "ok") {
+                $(".contact__email").val("");
+                $(".contact__message").val("");
+                $(".contact__name").val("");
+                $(".contact__tel").val("");
+
+                errorText.text('Wiadomość wysłano pomyślnie.')
+
+            } else if (result.replace(/\s/g, '') !== "ok") {
+                errorText.text('Błąd, nie udało się wysłać wiadomości.')
+            }
+
+        }
+    });
+
+});

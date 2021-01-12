@@ -2230,6 +2230,10 @@ footer {
   min-height: 70px;
 }
 
+.contact__errors {
+  color: red;
+}
+
 .contact__button {
   width: 130px;
   margin-top: 60px;

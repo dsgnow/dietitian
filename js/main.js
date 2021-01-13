@@ -25,7 +25,6 @@ navAllLinks.forEach((navLink) => {
             top: offsetPosition,
             behavior: 'smooth'
         });
-
     })
 })
 
@@ -237,3 +236,6 @@ $(".contact__button").click(function (e) {
     });
 
 });
+
+
+// mocha.run();

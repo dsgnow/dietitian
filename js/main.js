@@ -1,10 +1,12 @@
+"use strict"
+
 const hambPop = document.querySelector('.navBurger');
 const hambButton = document.querySelector('.navBurgerBox__btn');
 const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
 const navigation = document.querySelector('.nav');
-const navAllLinks = document.querySelectorAll('.nav__link, columnTexts__btn, .squareOffers__offer, .links__text');
+const navAllLinks = document.querySelectorAll('.nav__link, .columnTexts__btn, .squareOffers__offer, .links__text');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 const allOffers = document.querySelectorAll('.squareOffers__offer');
 

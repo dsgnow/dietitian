@@ -166,41 +166,46 @@ $(".contact__button").click(function (e) {
     let contact__tel = $(".contact__tel").val();
     contact__message = DOMPurify.sanitize(contact__tel);
 
-    if (!$(".contact__name").val()) {
-        errorText.text("Podaj swoje imię.");
-        $(".contact__name").focus();
-        return false;
-    }
+    const email = $(".contact__email").val();
 
-    if (!$(".contact__email").val()) {
-        errorText.text("Podaj swój email.");
-        $(".contact__email").focus();
-        return false;
-    }
+    const contactInputs = document.querySelectorAll('.contact__input');
+    const errorInfo = document.createElement("p");
+    errorInfo.classList.add('contact__errors');
 
     function validateEmail(email) {
         let re = /\S+@\S+\.\S+/;
         return re.test(email);
     }
 
-    const email = $(".contact__email").val();
+    function clearErrorInfos () {
+        const errorInfos = document.querySelectorAll('.contact__errors');
+        errorInfos.forEach(element => { 
+            element.remove();
+        });
+    }
+
+    clearErrorInfos();
+
+    contactInputs.forEach(element => {
+        if (!element.value) {
+            element.focus();
+            errorInfo.textContent = 'Pole jest wymagane.';
+            element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
+            return false;
+        } else if (element.value && !validateEmail(email)){
+            errorInfo.textContent = 'Wpisz poprawny email.';
+            element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
+            return false;
+        }
+    });
+
+
+    
     if (validateEmail(email)) {
         console.log("correct format");
     } else {
         errorText.text("Podaj poprawny email.");
         $(".contact__email").focus();
-        return false;
-    }
-
-    if (!$(".contact__tel").val()) {
-        errorText.text("Podaj numer telefonu.");
-        $(".contact__tel").focus();
-        return false;
-    }
-
-    if (!$(".contact__message").val()) {
-        errorText.text("Uzupełnij wiadomość.");
-        $(".contact__message").focus();
         return false;
     }
 

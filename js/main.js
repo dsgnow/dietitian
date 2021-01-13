@@ -187,12 +187,13 @@ $(".contact__button").click(function (e) {
     clearErrorInfos();
 
     contactInputs.forEach(element => {
+
         if (!element.value) {
             element.focus();
             errorInfo.textContent = 'Pole jest wymagane.';
             element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
             return false;
-        } else if (element.value && !validateEmail(email)){
+        } else if (element.value && !validateEmail(email) && element.classList.contains('contact__input--email')){
             errorInfo.textContent = 'Wpisz poprawny email.';
             element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
             return false;

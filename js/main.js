@@ -201,16 +201,6 @@ $(".contact__button").click(function (e) {
     });
 
 
-    
-    if (validateEmail(email)) {
-        console.log("correct format");
-    } else {
-        errorText.text("Podaj poprawny email.");
-        $(".contact__email").focus();
-        return false;
-    }
-
-
     $.ajax({
         type: "POST",
         contentType: "application/x-www-form-urlencoded; charset=iso-8859-1",

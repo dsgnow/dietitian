@@ -152,85 +152,110 @@ const parallaxInstance3 = new Parallax(scene3);
 $(".contact__button").click(function (e) {
     e.preventDefault();
 
-    let errorText = $(".contact__errors");
-
-    let contact__name = $(".contact__name").val();
+    let contact__name = document.querySelector(".contact__name").value;
     contact__name = DOMPurify.sanitize(contact__name);
 
-    let contact__email = $(".contact__email").val();
+    let contact__email = document.querySelector(".contact__email").value;
     contact__email = DOMPurify.sanitize(contact__email);
 
-    let contact__message = $(".contact__message").val();
+    let contact__message = document.querySelector(".contact__message").value;
     contact__message = DOMPurify.sanitize(contact__message);
 
-    let contact__tel = $(".contact__tel").val();
+    let contact__tel = document.querySelector(".contact__tel").value;
     contact__message = DOMPurify.sanitize(contact__tel);
 
-    const email = $(".contact__email").val();
-
     const contactInputs = document.querySelectorAll('.contact__input');
-    const errorInfo = document.createElement("p");
-    errorInfo.classList.add('contact__errors');
 
-    function validateEmail(email) {
-        let re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
-
-    function clearErrorInfos () {
+    const clearErrorInfos = () => {
         const errorInfos = document.querySelectorAll('.contact__errors');
-        errorInfos.forEach(element => { 
+        errorInfos.forEach(element => {
             element.remove();
         });
     }
 
-    clearErrorInfos();
+    let focusFlag = false;
 
-    contactInputs.forEach(element => {
+    const validateInputs = () => {
+        contactInputs.forEach(element => {
+            const errorInfo = document.createElement("p");
+            errorInfo.classList.add('contact__errors');
+            const email = $(".contact__email").val();
 
-        if (!element.value) {
-            element.focus();
-            errorInfo.textContent = 'Pole jest wymagane.';
-            element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
-            return false;
-        } else if (element.value && !validateEmail(email) && element.classList.contains('contact__input--email')){
-            errorInfo.textContent = 'Wpisz poprawny email.';
-            element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
-            return false;
-        }
-    });
-
-
-    $.ajax({
-        type: "POST",
-        contentType: "application/x-www-form-urlencoded; charset=iso-8859-1",
-        url: "gmail.php",
-
-        data: {
-            contact__email: contact__email,
-            contact__name: contact__name,
-            contact__message: contact__message,
-            contact__tel: contact__tel
-        },
-
-        success: function (result) {
-
-            console.log(result);
-            if (result.replace(/\s/g, '') == "ok") {
-                $(".contact__email").val("");
-                $(".contact__message").val("");
-                $(".contact__name").val("");
-                $(".contact__tel").val("");
-
-                errorText.text('Wiadomość wysłano pomyślnie.')
-
-            } else if (result.replace(/\s/g, '') !== "ok") {
-                errorText.text('Błąd, nie udało się wysłać wiadomości.')
+            function validateEmail(email) {
+                let re = /\S+@\S+\.\S+/;
+                return re.test(email);
             }
 
-        }
-    });
+            if (!element.value) {
+                if (focusFlag == false) {
+                    element.focus();
+                    focusFlag = true;
+                }
 
+                errorInfo.textContent = 'Pole jest wymagane.';
+                element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
+                return false;
+            } else if (element.value && !validateEmail(email) && element.classList.contains('contact__input--email')) {
+                element.focus();
+                focusFlag = true;
+                errorInfo.textContent = 'Wpisz poprawny email.';
+                element.insertAdjacentHTML('afterEnd', errorInfo.outerHTML)
+                return false;
+            }
+
+        });
+    }
+
+    const clearInputsOnTyping = () => {
+        contactInputs.forEach(input => {
+            input.addEventListener('keydown', clearInput => {
+                input.nextSibling.textContent = '';
+            })
+        })
+    }
+
+    clearErrorInfos();
+    validateInputs();
+    clearInputsOnTyping();
+
+    if (focusFlag == true) {
+        return false;
+    } else {
+
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=iso-8859-1",
+            url: "gmail.php",
+
+            data: {
+                contact__email: contact__email,
+                contact__name: contact__name,
+                contact__message: contact__message,
+                contact__tel: contact__tel
+            },
+
+            success: function (result) {
+
+                console.log(result);
+                const errorInfo = document.createElement("p");
+
+                if (result.replace(/\s/g, '') == "ok") {
+                    document.querySelector(".contact__email").value = '';
+                    document.querySelector(".contact__message").value = '';
+                    document.querySelector(".contact__name").value = '';
+                    document.querySelector(".contact__tel").value = '';
+
+                    errorInfo.textContent = 'Wiadomość wysłano pomyślnie.';
+                    errorInfo.classList.add('contact__errors', 'contact__errors--success');
+                    document.querySelector(".contact__message").insertAdjacentHTML('afterEnd', errorInfo.outerHTML);
+                } else if (result.replace(/\s/g, '') !== "ok") {
+                    errorInfo.textContent = 'Błąd, nie udało się wysłać wiadomości.';
+                    errorInfo.classList.add('contact__errors');
+                    document.querySelector(".contact__message").insertAdjacentHTML('afterEnd', errorInfo.outerHTML);
+                }
+            }
+        });
+    }
 });
 
 

@@ -1123,15 +1123,16 @@ footer {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100vw;
   padding: 10px 0;
   background-color: #111111;
@@ -1143,9 +1144,8 @@ footer {
   font-family: inherit;
   color: #727272;
   font-size: 10px;
-  width: 33%;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 20px;
 }
 
 @media (orientation: landscape) {
@@ -1157,7 +1157,7 @@ footer {
 
 @media (orientation: landscape) and (min-width: 768px) {
   .decription__text {
-    margin: 0 35px;
+    margin: 0 80px;
   }
 }
 
@@ -1175,12 +1175,20 @@ footer {
   padding: 20px 0;
   height: auto;
   background-color: black;
-  width: 100%;
+}
+
+@media (orientation: landscape) {
+  .links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .links__text {
   font-size: 12px;
   margin: 5px 0;
+  color: #727272;
 }
 
 .links__text:hover {
@@ -1226,12 +1234,22 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
-  text-align: center;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0 20px;
+}
+
+@media (orientation: landscape) {
+  .wrapLinks {
+    margin: 0 50px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .wrapLinks {
+    margin: 0 150px;
+  }
 }
 
 .wrapLinks h5 {
@@ -1250,22 +1268,20 @@ footer {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 0 10px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin: 0 20px;
   display: none;
 }
 
 @media (orientation: landscape) {
   .wrapLogo {
     display: block;
+    margin: 0 50px;
   }
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
   .wrapLogo {
-    margin: 0 100px;
+    margin: 0 150px;
   }
 }
 
@@ -2223,6 +2239,12 @@ footer {
   border-bottom: 1px solid #333333;
   min-height: 50px;
   width: 90%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__name:focus, .contact__email:focus, .contact__message:focus, .contact__tel:focus {
+  border-bottom: 1px solid #73D9ED;
 }
 
 .contact__message {
@@ -2231,7 +2253,12 @@ footer {
 
 .contact__errors {
   color: red;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  margin: 5px 0 0;
+}
+
+.contact__errors--success {
+  color: green;
 }
 
 .contact__button {

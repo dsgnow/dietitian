@@ -13,10 +13,26 @@ use PHPMailer\PHPMailer\SMTP;
 
 require 'vendor/autoload.php';
 
-$name = $_POST['contact__name'];
-$emailSender = $_POST['contact__email'];
-$message = $_POST['contact__message'];
-$tel = $_POST['contact__tel'];
+$name = $emailSender = $message = $tel = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["contact__name"]);
+  $emailSender = test_input($_POST["contact__email"]);
+  $message = test_input($_POST["contact__message"]);
+  $tel = test_input($_POST["contact__tel"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+if (empty($name) || empty($emailSender) || empty($message) || empty($tel) ) {
+  echo 'error';
+  return False;
+}
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;

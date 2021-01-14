@@ -323,7 +323,7 @@
             <input type="tel" aria-label="tel" class="tel contact__tel  contact__input" id="tel" placeholder="Telefon"
               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
             <label class="contact__label contact__label--message" for="message">Twoja wiadomość</label>
-            <textarea type="text" aria-label="message" class="message contact__message  contact__input" id="message"
+            <textarea type="text" aria-label="message" class="message contact__message  contact__input contact__input--message" id="message"
               placeholder="Wiadomość" type="text"></textarea>
             <button class="button contact__button">wyślij</button>
           </div>
@@ -346,14 +346,16 @@
       <i class="fab fa-linkedin social__icon"></i>
     </div>
     <div class="links">
-      <div class="wrapLinks">
-        <h5>Przeczytaj</h5>
-        <p class="links__text" data-section="nav__link--about">O mnie</p>
-        <p class="links__text" data-section="nav__link--offer">Oferta</p>
-        <p class="links__text" data-section="nav__link--visit">Wizyta</p>
-      </div>
       <div class="wrapLogo">
         <img class="wrapLogo__img" src="svg/dietLogo.svg" alt="treszczotko logo">
+      </div>
+      <div class="wrapLinks">
+        <h5>Przeczytaj</h5>
+        <ul class="links__list">
+          <li class="links__text" data-section="nav__link--about">O mnie</li>
+          <li class="links__text" data-section="nav__link--offer">Oferta</li>
+          <li class="links__text" data-section="nav__link--visit">Wizyta</li>
+        </ul>
       </div>
       <div class="wrapLinks">
         <h5>Bądźmy w kontakcie</h5>
@@ -363,8 +365,7 @@
       </div>
     </div>
     <div class="decription">
-      <p class="decription__text">Treszczotko - dietetyka &copy 2021</p>
-      <p class="decription__text">Created by: dsgnow</p>
+      <p class="decription__text">Treszczotko - dietetyka &copy 2021 | Created by: dsgnow</p>
     </div>
   </footer>
   <script src='js/jquery.js'></script>

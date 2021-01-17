@@ -115,6 +115,10 @@ footer {
         }
 
         @media (orientation: landscape) and (min-width: 768px) {
+            margin: 0 40px;
+        }
+
+        @media (orientation: landscape) and (min-width: 1280px) {
             margin: 0 80px;
         }
     }
@@ -147,6 +151,7 @@ footer {
             font-size: 14px;
             margin: 10px 0;
         }
+
 
         @media (orientation: landscape) and (min-width: 768px) {
             margin: 12px 0;
@@ -181,6 +186,10 @@ footer {
     }
 
     @media (orientation: landscape) and (min-width: 768px) {
+        margin: 0 60px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1280px) {
         margin: 0 150px;
     }
 
@@ -206,6 +215,10 @@ footer {
     }
 
     @media (orientation: landscape) and (min-width: 768px) {
+        margin: 0 60px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1280px) {
         margin: 0 150px;
     }
 

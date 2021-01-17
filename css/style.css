@@ -1157,6 +1157,12 @@ footer {
 
 @media (orientation: landscape) and (min-width: 768px) {
   .decription__text {
+    margin: 0 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  .decription__text {
     margin: 0 80px;
   }
 }
@@ -1248,6 +1254,12 @@ footer {
 
 @media (orientation: landscape) and (min-width: 768px) {
   .wrapLinks {
+    margin: 0 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  .wrapLinks {
     margin: 0 150px;
   }
 }
@@ -1280,6 +1292,12 @@ footer {
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
+  .wrapLogo {
+    margin: 0 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
   .wrapLogo {
     margin: 0 150px;
   }

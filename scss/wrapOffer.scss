@@ -290,6 +290,8 @@
 
 .imageOffers__wrap {
     position: relative;
+    display: flex;
+    justify-content: center;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
     margin: 0 20px;

@@ -1533,12 +1533,12 @@ footer {
 }
 
 .columnImages__imgDietitian--nutritionist {
-  width: 70%;
+  width: 60%;
 }
 
 @media (orientation: landscape) {
   .columnImages__imgDietitian--nutritionist {
-    width: 60%;
+    width: 50%;
   }
 }
 

@@ -299,6 +299,15 @@
     background-color: white;
 
     @media (orientation: landscape) {
+        & picture {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 100%;
+        }
+    }
+
+    @media (orientation: landscape) {
         height: 70vh;
     }
 
@@ -309,6 +318,11 @@
 
     &--img {
         width: 100%;
+
+        @media (orientation: landscape) {
+            width: auto;
+            height: 100%;
+        }
 
         @media (orientation: landscape) and (min-width: 1024px) {
             height: 110%;

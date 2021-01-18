@@ -1969,6 +1969,20 @@ footer {
 }
 
 @media (orientation: landscape) {
+  .imageOffers__wrap picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    height: 100%;
+  }
+}
+
+@media (orientation: landscape) {
   .imageOffers__wrap {
     height: 70vh;
   }
@@ -1983,6 +1997,13 @@ footer {
 
 .imageOffers__wrap--img {
   width: 100%;
+}
+
+@media (orientation: landscape) {
+  .imageOffers__wrap--img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {

@@ -1183,14 +1183,6 @@ footer {
   background-color: black;
 }
 
-@media (orientation: landscape) and (min-width: 640px) {
-  .links {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
 .links__text {
   font-size: 12px;
   margin: 5px 0;
@@ -1550,8 +1542,8 @@ footer {
 .columnImages__blob {
   position: absolute;
   left: 0%;
-  -webkit-animation: bulb linear 4s infinite;
-          animation: bulb linear 4s infinite;
+  -webkit-animation: bulb linear 14s infinite;
+          animation: bulb linear 14s infinite;
   width: 100%;
   right: auto;
   z-index: -1;
@@ -1560,8 +1552,8 @@ footer {
 .columnImages__blobSmall {
   position: absolute;
   left: 2%;
-  -webkit-animation: bulbSmall linear 6s infinite;
-          animation: bulbSmall linear 6s infinite;
+  -webkit-animation: bulbSmall linear 18s infinite;
+          animation: bulbSmall linear 18s infinite;
   width: 90%;
   right: auto;
   z-index: -1;

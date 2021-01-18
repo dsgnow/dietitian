@@ -22,12 +22,11 @@
     content="Chcesz się zacząć zdrowo odżywiać? Zacznij już dziś! Dominika Treszczotko - dietetyk kliniczny." />
   <meta property="og:type" content="article" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script> -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/test.js"></script>
-  <title>Dietitian</title>
+  <!-- <script src="js/test.js"></script> -->
 </head>
 
 <body>
@@ -54,7 +53,7 @@
     <nav class="navBurger navBurger--hide">
       <ul class="navBurger__list">
         <li class="navBurger__element">
-          <img class="navBurger__logo" src="svg/dietLogo.svg" alt="logo traszczotko dietetyka"></img>
+          <img class="navBurger__logo" src="svg/dietLogo.svg" alt="logo traszczotko dietetyka">
         </li>
         <li class="navBurger__element navBurger__element--selected">
           <a class="navBurger__link navBurger__link--start" data-section="nav__link--start" href="#">Start</a>
@@ -83,7 +82,7 @@
     </div>
   </header>
   <main>
-    <div id="mocha"></div>
+    <!-- <div id="mocha"></div> -->
     <div class="wrapStart wrapSection" data-sectionin="nav__link--start">
       <section class="columnTexts">
         <h1 class="columnTexts__head">Dietetyka kliniczna</h1>
@@ -94,13 +93,13 @@
         </p>
         <button data-section="nav__link--about" class="button columnTexts__btn">czytaj dalej</button>
       </section>
-      <section class="columnImages" id="scene">
+      <aside class="columnImages" id="scene">
         <div class="columnImages__wrap" data-depth="0.1">
           <img class="columnImages__blob" src="svg/blob.svg" alt="blob">
           <img class="columnImages__blobSmall" src="svg/blob.svg" alt="blob">
           <img class="columnImages__imgDietitian" src="svg/dietitianStart.svg" alt="animacja dietetyk">
         </div>
-      </section>
+      </aside>
     </div>
     <div class="wrapAbout wrapSection" data-sectionin="nav__link--about">
       <section class="columnTexts columnTexts--about">
@@ -113,14 +112,14 @@
         </p>
         <button data-section="nav__link--offer" class="button columnTexts__btn">sprawdź usługi</button>
       </section>
-      <section class="columnImages">
+      <aside class="columnImages">
         <div class="columnImages__wrap">
           <img class="columnImages__blob" src="svg/blob.svg" alt="blob">
           <img class="columnImages__blobSmall" src="svg/blob.svg" alt="blob">
           <img class="columnImages__imgDietitian columnImages__imgDietitian--nutritionist" src="img/test3.png"
             alt="animacja dietetyk">
         </div>
-      </section>
+      </aside>
     </div>
     <div class="wrapSection wrapSection--bgcGrey">
       <div class="wrapOffer" data-sectionin="nav__link--offer">
@@ -180,7 +179,7 @@
         </section>
       </div>
       <div class="wrapImageAndLandscape wrapSection">
-        <section class="imageOffers">
+        <aside class="imageOffers">
           <div class="imageOffers__wrap">
             <picture>
               <source media="(min-width: 1281px)" srcset="img/food_789-1476.jpg">
@@ -190,7 +189,7 @@
               <img class="imageOffers__wrap--img" src="img/food6.jpg" alt="warzywa i owoce">
             </picture>
           </div>
-        </section>
+        </aside>
         <section class="squareOffers squareOffers--landscape" data-sectionin="nav__link--visit">
           <div class="squareOffers__offer squareOffers__offer--landscape" data-sectionin="offerFirst">
             <div class="squareOffers__imgWrap">
@@ -246,7 +245,7 @@
         </div>
       </div>
     </div>
-    <section class="testimonials">
+    <div class="testimonials">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -300,7 +299,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <section data-sectionin="nav__link--contact" class="contact wrapSection">
       <h3 class="contact__head">Kontakt</h3>
       <div class="contactWrap">
@@ -308,7 +307,7 @@
           <address class="localization__address">
             <p class="localization__name">Dominika Treszczotko</p>
             <p class="localization__town">Gliwice 44-100, ul. Zwycięstwa 30</p>
-            <a class="localization__email" href="mailto: trzeszczotko@gmail.com">trzeszczotko@gmail.com</a>
+            <a class="localization__email" href="mailto:trzeszczotko@gmail.com">trzeszczotko@gmail.com</a>
             <a class="localization__tel" href="tel:+517234234">tel.
               517-234-234</a>
           </address>
@@ -325,9 +324,9 @@
             <input type="tel" aria-label="tel" class="tel contact__tel  contact__input" id="tel" placeholder="Telefon"
               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
             <label class="contact__label contact__label--message" for="message">Twoja wiadomość</label>
-            <textarea type="text" aria-label="message"
+            <textarea aria-label="message"
               class="message contact__message  contact__input contact__input--message" id="message"
-              placeholder="Wiadomość" type="text"></textarea>
+              placeholder="Wiadomość"></textarea>
             <button class="button contact__button">wyślij</button>
           </div>
         </div>

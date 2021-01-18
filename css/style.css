@@ -1257,14 +1257,16 @@ footer {
   }
 }
 
-.wrapLinks h5 {
+.wrapLinks .links__title {
   color: white;
   font-size: 14px;
   margin: 10px 0 15px;
+  border: none;
+  padding: 0;
 }
 
 @media (orientation: landscape) and (min-width: 768px) {
-  .wrapLinks h5 {
+  .wrapLinks .links__title {
     font-size: 18px;
   }
 }

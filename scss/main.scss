@@ -15,6 +15,41 @@
     }
 }
 
+@keyframes bulb {
+    0% {
+        top: 25%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        top: 5%;
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        top: 25%;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes bulbDomi {
+    0% {
+        top: 40%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        top: 30%;
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        top: 50%;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
 @keyframes bulbSmall {
     0% {
         top: -5%;
@@ -31,6 +66,7 @@
         transform: rotate(360deg) scale(1);
     }
 }
+
 
 html {
     font-family: 'Open Sans', sans-serif;

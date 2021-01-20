@@ -84,6 +84,22 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// const aboutMoreInfoBtn = document.querySelector('.columnTexts__btn--aboutMoreInfo');
+// const aboutMoreInfo = document.querySelector('.columnTexts__moreInfo');
+// aboutMoreInfoBtn.addEventListener('click', () => {
+//     aboutMoreInfo.classList.toggle('columnTexts__moreInfo--hide');
+// })
+
+$(document).ready(function() {
+    $('.columnTexts__btn--hideStart').click(function() {
+        $('.columnTexts__moreInfo--hideStart').slideToggle("slow");
+    });
+
+    $('.columnTexts__btn--hideAbout').click(function() {
+        $('.columnTexts__moreInfo--hideAbout').slideToggle("slow");
+    });
+});
+
 jQuery(document).ready(($) => {
     "use strict";
     $('#customers-testimonials').owlCarousel({

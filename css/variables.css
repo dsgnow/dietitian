@@ -118,11 +118,37 @@ p,
   margin: 20px 0 25px;
 }
 
+p--check,
+.columnTexts__descriptionText--check {
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+p--checkNoMargin,
+.columnTexts__descriptionText--checkNoMargin {
+  margin: 0;
+  text-align: left;
+}
+
+p--first,
+.columnTexts__descriptionText--first {
+  margin-top: 0;
+}
+
 @media (min-width: 1024px) {
   p,
   .columnTexts__descriptionText {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.5;
   }
+}
+
+.fa-check {
+  margin-right: 10px;
+  color: #73D9ED;
+}
+
+b {
+  font-size: 1.1em;
 }
 /*# sourceMappingURL=variables.css.map */

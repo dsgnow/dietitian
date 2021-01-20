@@ -170,6 +170,10 @@
         &--landscape:last-child {
             margin-bottom: 50px;
 
+            @media (min-width: 100px) {
+                margin-bottom: 100px;
+            }
+
             @media (orientation: landscape) {
                 margin-bottom: 80px;
             }
@@ -246,12 +250,16 @@
     }
 
     &__description {
-        font-size: 13px;
+        font-size: 12px;
         transition: .3s;
         text-align: left;
 
+        &--check {
+            margin: 0 0 25px;
+        }
+
         @media (orientation: landscape) and (min-width: 1024px) {
-            font-size: 17px;
+            font-size: 15px;
         }
     }
 
@@ -281,7 +289,7 @@
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
-        height: 80em;
+        height: 100em;
         max-width: 49%;
         margin: 20px 0;
     }

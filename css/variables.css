@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #73D9ED;
+  background: #009DE0;
 }
 
 .nav__link {
@@ -18,7 +18,7 @@
 }
 
 .button {
-  background-color: #73D9ED;
+  background-color: #009DE0;
   color: white;
   outline: none;
   border: 2px solid transparent;
@@ -34,9 +34,9 @@
 }
 
 .button:hover {
-  border: 2px solid #73D9ED;
+  border: 2px solid #009DE0;
   background-color: white;
-  color: #73D9ED;
+  color: #009DE0;
 }
 
 h1,
@@ -49,7 +49,7 @@ h4,
   color: #333333;
   line-height: 40px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #73D9ED;
+  border-bottom: 2px solid #009DE0;
   width: 100%;
 }
 
@@ -161,7 +161,7 @@ p--first,
 
 .fa-check {
   margin-right: 10px;
-  color: #73D9ED;
+  color: #009DE0;
 }
 
 b {

@@ -261,7 +261,6 @@ footer {
 
     &__img {
         width: 100%;
-        filter: brightness(0) invert(1);
 
         @media (orientation: landscape) and (min-width: 768px) {
             height: 90px;

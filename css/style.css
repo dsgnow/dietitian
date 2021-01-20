@@ -2077,6 +2077,14 @@ footer {
 
 @media (orientation: landscape) and (min-width: 1024px) {
   .imageOffers {
+    height: 105em;
+    max-width: 49%;
+    margin: 20px 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1921px) {
+  .imageOffers {
     height: 120em;
     max-width: 49%;
     margin: 20px 0;

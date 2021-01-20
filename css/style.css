@@ -2077,7 +2077,7 @@ footer {
 
 @media (orientation: landscape) and (min-width: 1024px) {
   .imageOffers {
-    height: 105em;
+    height: 100%;
     max-width: 49%;
     margin: 20px 0;
   }
@@ -2085,7 +2085,7 @@ footer {
 
 @media (orientation: landscape) and (min-width: 1921px) {
   .imageOffers {
-    height: 120em;
+    height: 100%;
     max-width: 49%;
     margin: 20px 0;
   }
@@ -2130,24 +2130,6 @@ footer {
   .imageOffers__wrap {
     border-radius: 20% 0 20% 0;
     height: 100%;
-  }
-}
-
-.imageOffers__wrap--img {
-  width: 100%;
-}
-
-@media (orientation: landscape) {
-  .imageOffers__wrap--img {
-    width: auto;
-    height: 100%;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 1024px) {
-  .imageOffers__wrap--img {
-    height: 110%;
-    width: auto;
   }
 }
 

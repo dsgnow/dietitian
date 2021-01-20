@@ -290,13 +290,13 @@
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {
-        height: 105em;
+        height: 100%;
         max-width: 49%;
         margin: 20px 0;
     }
 
     @media (orientation: landscape) and (min-width: 1921px) {
-        height: 120em;
+        height: 100%;
         max-width: 49%;
         margin: 20px 0;
     }
@@ -331,17 +331,4 @@
         height: 100%;
     }
 
-    &--img {
-        width: 100%;
-
-        @media (orientation: landscape) {
-            width: auto;
-            height: 100%;
-        }
-
-        @media (orientation: landscape) and (min-width: 1024px) {
-            height: 110%;
-            width: auto;
-        }
-    }
 }

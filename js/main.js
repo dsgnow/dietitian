@@ -141,23 +141,23 @@ changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 
 
-var lastScrollTop = 0;
+// var lastScrollTop = 0;
 
-function hideNav() {
-    var st = this.scrollY;
+// function hideNav() {
+//     var st = this.scrollY;
 
-    if (st > lastScrollTop) {
-        setTimeout(function () {
-            navigation.classList.add('nav--opacityNone');
-        }, 300);
-    } else {
-        navigation.classList.remove('nav--opacityNone');
-    }
+//     if (st > lastScrollTop) {
+//         setTimeout(function () {
+//             navigation.classList.add('nav--opacityNone');
+//         }, 300);
+//     } else {
+//         navigation.classList.remove('nav--opacityNone');
+//     }
 
-    lastScrollTop = st;
-}
+//     lastScrollTop = st;
+// }
 
-window.addEventListener('scroll', hideNav);
+// window.addEventListener('scroll', hideNav);
 
 const scene = document.getElementById('scene');
 const scene3 = document.getElementById('scene3');

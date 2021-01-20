@@ -2062,6 +2062,8 @@ footer {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   width: 100%;
   margin: 0;
   height: 100%;
@@ -2075,7 +2077,7 @@ footer {
 
 @media (orientation: landscape) and (min-width: 1024px) {
   .imageOffers {
-    height: 100em;
+    height: 120em;
     max-width: 49%;
     margin: 20px 0;
   }

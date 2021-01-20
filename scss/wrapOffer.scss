@@ -284,6 +284,7 @@
     width: 100%;
     margin: 0;
     height: 100%;
+    min-height: 200px;
 
     @media (orientation: landscape) {
         height: 60vh;
@@ -312,6 +313,8 @@
     margin: 0 20px;
     overflow: hidden;
     background-color: white;
+    min-height: 200px;
+
 
     @media (orientation: landscape) {
         & picture {
@@ -323,7 +326,7 @@
     }
 
     @media (orientation: landscape) {
-        height: 70vh;
+        height: auto;
     }
 
     @media (orientation: landscape) and (min-width: 1024px) {

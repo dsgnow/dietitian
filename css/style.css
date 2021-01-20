@@ -1481,7 +1481,7 @@ footer {
 
 @media (orientation: portrait) {
   .wrapAbout {
-    margin-top: 50px;
+    margin-top: 80px;
   }
 }
 
@@ -1607,7 +1607,7 @@ footer {
 }
 
 .columnImages__wrap {
-  margin-bottom: 20px;
+  margin: 20px 0;
   overflow: hidden;
   position: relative;
   text-align: center;

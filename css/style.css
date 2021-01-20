@@ -135,7 +135,7 @@ p,
 
 p--check,
 .columnTexts__descriptionText--check {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
   text-align: left;
 }
 
@@ -1516,6 +1516,7 @@ footer {
 
 .columnTexts__moreInfo--hideStart, .columnTexts__moreInfo--hideAbout {
   display: none;
+  margin-top: 0;
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
@@ -2012,7 +2013,7 @@ footer {
 }
 
 .squareOffers__description--check {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {

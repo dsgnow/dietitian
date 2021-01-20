@@ -41,6 +41,7 @@
     &__moreInfo--hideStart,
     &__moreInfo--hideAbout {
         display: none;
+        margin-top: 0;
     }
 
     @media (orientation: portrait) and (min-width: 768px) {

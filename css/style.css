@@ -694,7 +694,7 @@ b {
 }
 
 .navBurger__element:nth-child(1) {
-  background-color: #F6F6F6;
+  background-color: #333333;
 }
 
 .navBurger__element:hover .navBurger__link {
@@ -707,7 +707,7 @@ b {
 }
 
 .navBurger__link {
-  color: black;
+  color: #333333;
   width: 100%;
   -webkit-transition: .3s;
   transition: .3s;

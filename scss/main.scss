@@ -1,269 +1,261 @@
 @keyframes bulb {
-    0% {
-        top: 25%;
-        transform: rotate(0deg) scale(1);
-    }
+  0% {
+    top: 25%;
+    transform: rotate(0deg) scale(1);
+  }
 
-    50% {
-        top: 5%;
-        transform: rotate(180deg) scale(1.1);
-    }
+  50% {
+    top: 5%;
+    transform: rotate(180deg) scale(1.1);
+  }
 
-    100% {
-        top: 25%;
-        transform: rotate(360deg) scale(1);
-    }
+  100% {
+    top: 25%;
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @keyframes bulb {
-    0% {
-        top: 25%;
-        transform: rotate(0deg) scale(1);
-    }
+  0% {
+    top: 25%;
+    transform: rotate(0deg) scale(1);
+  }
 
-    50% {
-        top: 5%;
-        transform: rotate(180deg) scale(1.1);
-    }
+  50% {
+    top: 5%;
+    transform: rotate(180deg) scale(1.1);
+  }
 
-    100% {
-        top: 25%;
-        transform: rotate(360deg) scale(1);
-    }
+  100% {
+    top: 25%;
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @keyframes bulbDomi {
-    0% {
-        top: 40%;
-        transform: rotate(0deg) scale(1);
-    }
+  0% {
+    top: 40%;
+    transform: rotate(0deg) scale(1);
+  }
 
-    50% {
-        top: 30%;
-        transform: rotate(180deg) scale(1.1);
-    }
+  50% {
+    top: 30%;
+    transform: rotate(180deg) scale(1.1);
+  }
 
-    100% {
-        top: 50%;
-        transform: rotate(360deg) scale(1);
-    }
+  100% {
+    top: 50%;
+    transform: rotate(360deg) scale(1);
+  }
 }
-
 
 @keyframes bulbSmall {
-    0% {
-        top: -5%;
-        transform: rotate(0deg) scale(1);
-    }
+  0% {
+    top: -5%;
+    transform: rotate(0deg) scale(1);
+  }
 
-    50% {
-        top: -5%;
-        transform: rotate(180deg) scale(1.2);
-    }
+  50% {
+    top: -5%;
+    transform: rotate(180deg) scale(1.2);
+  }
 
-    100% {
-        top: -5%;
-        transform: rotate(360deg) scale(1);
-    }
+  100% {
+    top: -5%;
+    transform: rotate(360deg) scale(1);
+  }
 }
 
-
 html {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main,
 footer {
-    max-width: 1920px;
-    overflow: hidden;
-    margin: 0 auto;
+  max-width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .footer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-self: center;
-    height: 50px;
-    background-color: $mainColor;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  height: 50px;
+  background-color: $mainColor;
+  width: 100%;
 
-    @media (orientation: landscape) {
-        height: 60px;
+  @media (orientation: landscape) {
+    height: 60px;
+  }
+
+  @media (orientation: landscape) and (min-width: 768px) {
+    height: 70px;
+  }
+
+  &__icon {
+    margin: 20px;
+    align-self: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
     }
 
     @media (orientation: landscape) and (min-width: 768px) {
-        height: 70px;
+      margin: 50px;
+      font-size: 40px;
     }
-
-    &__icon {
-        margin: 20px;
-        align-self: center;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        transition: .3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
-        @media (orientation: landscape) and (min-width: 768px) {
-            margin: 50px;
-            font-size: 40px;
-        }
-    }
+  }
 }
 
-
 .decription {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: auto;
-    padding: 10px 0;
-    background-color: #111111;
-    height: auto;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: auto;
+  padding: 10px 0;
+  background-color: #111111;
+  height: auto;
 
-    &__text {
-        margin: 0;
-        font-family: inherit;
-        color: $lightGrey;
-        font-size: 10px;
-        text-align: center;
-        margin: 0 20px;
+  &__text {
+    margin: 0;
+    font-family: inherit;
+    color: $lightGrey;
+    font-size: 10px;
+    text-align: center;
+    margin: 0 20px;
 
-        @media (orientation: landscape) {
-            font-size: 15px;
-            margin: 0 15px;
-        }
-
-        @media (orientation: landscape) and (min-width: 768px) {
-            margin: 0 40px;
-        }
-
-        @media (orientation: landscape) and (min-width: 1280px) {
-            margin: 0 80px;
-        }
+    @media (orientation: landscape) {
+      font-size: 15px;
+      margin: 0 15px;
     }
 
+    @media (orientation: landscape) and (min-width: 768px) {
+      margin: 0 40px;
+    }
+
+    @media (orientation: landscape) and (min-width: 1280px) {
+      margin: 0 80px;
+    }
+  }
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 20px 0;
-    height: auto;
-    background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+  height: auto;
+  background-color: rgb(0, 0, 0);
 
+  &__text {
+    font-size: 12px;
+    margin: 5px 0;
+    color: $lightGrey;
 
-    &__text {
-        font-size: 12px;
-        margin: 5px 0;
-        color: $lightGrey;
-
-        &:hover {
-            color: white;
-            cursor: pointer;
-        }
-
-        @media (orientation: landscape) {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-
-
-        @media (orientation: landscape) and (min-width: 768px) {
-            margin: 12px 0;
-        }
-
-        &--contact {
-
-            color: $lightGrey;
-
-            &:hover {
-                color: $lightGrey;
-                cursor: default;
-            }
-
-            font-size: 12px;
-            margin: 3px 0;
-
-            @media (orientation: landscape) {
-                font-size: 15px;
-                margin: 5px 0;
-            }
-        }
+    &:hover {
+      color: white;
+      cursor: pointer;
     }
+
+    @media (orientation: landscape) {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    @media (orientation: landscape) and (min-width: 768px) {
+      margin: 12px 0;
+    }
+
+    &--contact {
+      color: $lightGrey;
+
+      &:hover {
+        color: $lightGrey;
+        cursor: default;
+      }
+
+      font-size: 12px;
+      margin: 3px 0;
+
+      @media (orientation: landscape) {
+        font-size: 15px;
+        margin: 5px 0;
+      }
+    }
+  }
 }
 
 .wrapLinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 20px;
 
-    @media (orientation: landscape) {
-        margin: 0 50px;
-    }
+  @media (orientation: landscape) {
+    margin: 0 50px;
+  }
+
+  @media (orientation: landscape) and (min-width: 768px) {
+    margin: 0 60px;
+  }
+
+  @media (orientation: landscape) and (min-width: 1280px) {
+    margin: 0 150px;
+  }
+
+  & .links__title {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0 15px;
+    border: none;
+    padding: 0;
 
     @media (orientation: landscape) and (min-width: 768px) {
-        margin: 0 60px;
+      font-size: 18px;
     }
-
-    @media (orientation: landscape) and (min-width: 1280px) {
-        margin: 0 150px;
-    }
-
-    & .links__title {
-        color: white;
-        font-size: 14px;
-        margin: 10px 0 15px;
-        border: none;
-        padding: 0;
-
-        @media (orientation: landscape) and (min-width: 768px) {
-            font-size: 18px;
-        }
-    }
+  }
 }
 
 .wrapLogo {
-    align-self: center;
-    margin: 0 20px;
-    display: none;
+  align-self: center;
+  margin: 0 20px;
+  display: none;
 
-    @media (orientation: landscape) and (min-width: 640px) {
-        display: block;
-        margin: 0 50px;
-    }
+  @media (orientation: landscape) and (min-width: 640px) {
+    display: block;
+    margin: 0 50px;
+  }
+
+  @media (orientation: landscape) and (min-width: 768px) {
+    margin: 0 60px;
+  }
+
+  @media (orientation: landscape) and (min-width: 1280px) {
+    margin: 0 150px;
+  }
+
+  &__img {
+    width: 100%;
 
     @media (orientation: landscape) and (min-width: 768px) {
-        margin: 0 60px;
+      height: 90px;
     }
-
-    @media (orientation: landscape) and (min-width: 1280px) {
-        margin: 0 150px;
-    }
-
-    &__img {
-        width: 100%;
-
-        @media (orientation: landscape) and (min-width: 768px) {
-            height: 90px;
-        }
-    }
+  }
 }

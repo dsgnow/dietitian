@@ -1,14 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 'use strict';
 
 const hambPop = document.querySelector('.navBurger');
 const hambButton = document.querySelector('.navBurgerBox__btn');
-const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
 let hambActiveFlag = false;
-const navigation = document.querySelector('.nav');
 const navAllLinks = document.querySelectorAll('.nav__link, .columnTexts__btn, .squareOffers__offer, .links__text');
 const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
-const allOffers = document.querySelectorAll('.squareOffers__offer');
 
 navAllLinks.forEach((navLink) => {
   navLink.addEventListener('click', function (e) {
@@ -85,12 +84,12 @@ window.addEventListener('scroll', () => {
 // })
 
 $(document).ready(function () {
-  $('.columnTexts__btn--hideStart').click(function () {
-    $('.columnTexts__moreInfo--hideStart').slideToggle('slow');
-  });
-
-  $('.columnTexts__btn--hideAbout').click(function () {
-    $('.columnTexts__moreInfo--hideAbout').slideToggle('slow');
+  $('.columnTexts__btn').each(function () {
+    $(this).click(function () {
+      $(this).hasClass('columnTexts__btn--hideStart') && $('.columnTexts__moreInfo--hideStart').slideToggle('slow');
+      $(this).hasClass('columnTexts__btn--hideAbout') && $('.columnTexts__moreInfo--hideAbout').slideToggle('slow');
+      $(this).text() === 'czytaj dalej' ? $(this).text('schowaj') : $(this).text('czytaj dalej');
+    });
   });
 });
 
@@ -125,6 +124,7 @@ const sections = document.querySelectorAll('.wrapSection');
 function changeLinkState() {
   let index = sections.length;
 
+  // eslint-disable-next-line no-empty
   while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
 
   links.forEach((link) => link.classList.remove('nav__element--selected'));
@@ -216,7 +216,7 @@ $('.contact__button').click(function (e) {
 
   const clearInputsOnTyping = () => {
     contactInputs.forEach((input) => {
-      input.addEventListener('keydown', (clearInput) => {
+      input.addEventListener('keydown', () => {
         input.nextSibling.textContent = '';
       });
     });

@@ -1,13 +1,14 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 12
-    },
-    "rules": {
-    }
+  plugins: ['html'],
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    jquery: true
+  },
+  extends: 'eslint:recommended',
+  parserOptions: {
+    ecmaVersion: 12
+  },
+  rules: {}
 };

@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #009DE0;
+  background: #009de0;
 }
 
 .nav__link {
@@ -18,7 +18,7 @@
 }
 
 .button {
-  background-color: #009DE0;
+  background-color: #009de0;
   color: white;
   outline: none;
   border: 2px solid transparent;
@@ -27,16 +27,16 @@
   padding: 8px 30px;
   border-radius: 15px;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   margin: 10px 0;
   letter-spacing: 1px;
 }
 
 .button:hover {
-  border: 2px solid #009DE0;
+  border: 2px solid #009de0;
   background-color: white;
-  color: #009DE0;
+  color: #009de0;
 }
 
 h1,
@@ -49,7 +49,7 @@ h4,
   color: #333333;
   line-height: 40px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #009DE0;
+  border-bottom: 2px solid #009de0;
   width: 100%;
 }
 
@@ -154,14 +154,14 @@ p--first,
 @media (min-width: 1024px) {
   p,
   .columnTexts__descriptionText {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.5;
   }
 }
 
 .fa-check {
   margin-right: 10px;
-  color: #009DE0;
+  color: #009de0;
 }
 
 b {
